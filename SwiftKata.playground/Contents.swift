@@ -221,3 +221,11 @@ func primeFactors(_ num: Int) -> [Int] {
     return result
 }
 
+func isPalindrome(_ numbers: [Int]) -> Bool {
+    numbers  == numbers.reversed()
+}
+func sumDictionaryValues(_ dict: [String: Int]) -> Int {
+    dict.values.reduce(0, +)
+    
+}
+
