@@ -228,4 +228,9 @@ func sumDictionaryValues(_ dict: [String: Int]) -> Int {
     dict.values.reduce(0, +)
     
 }
+func reverseWords2(_ sentence: String) -> String {
+    sentence.split(separator: " ").reversed().joined(separator: " ")
+  
+    
+}
 
