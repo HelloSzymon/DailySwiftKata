@@ -234,3 +234,17 @@ func reverseWords2(_ sentence: String) -> String {
     
 }
 
+func firstUniqueIndex(_ numbers: [Int]) -> Int? {
+    var numberCounts: [Int:Int] = [:]
+    for number in numbers {
+        numberCounts[number, default: 0] += 1
+    }
+    
+    for (index, number) in numbers.enumerated() {
+        if numberCounts[number] == 1{
+            return index
+    }}
+    
+    return nil
+}
+
