@@ -259,3 +259,13 @@ func countCharacterss(_ text: String) -> [Character: Int] {
     return lib
 }
 
+func invertMap(_ dict: [String: [Int]]) -> [Int: String] {
+    var result: [Int: String] = [:]
+    for (key, value) in dict {
+        for number in value {
+            result[number] = key
+        }
+    }
+    return result
+}
+
