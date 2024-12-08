@@ -248,3 +248,14 @@ func firstUniqueIndex(_ numbers: [Int]) -> Int? {
     return nil
 }
 
+func countCharacterss(_ text: String) -> [Character: Int] {
+    var lib: [Character : Int] = [:]
+    var filtered = text.lowercased().filter{$0 != " "}
+    
+  
+    for number in filtered {
+        lib[number, default: 0] += 1
+    }
+    return lib
+}
+
