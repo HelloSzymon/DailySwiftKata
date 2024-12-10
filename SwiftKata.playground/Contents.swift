@@ -285,3 +285,7 @@ func fibonacci(_ n: Int) -> [Int] {
     return result
 }
 
+func mergeUnique2(_ array1: [Int], _ array2: [Int]) -> [Int] {
+    Array(Set(array1).union(Set(array2)))
+}
+
