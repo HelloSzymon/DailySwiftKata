@@ -268,4 +268,20 @@ func invertMap(_ dict: [String: [Int]]) -> [Int: String] {
     }
     return result
 }
+func fibonacci(_ n: Int) -> [Int] {
+    
+    guard n > 0 else { return  [] }
+    var result: [Int] = [0, 1]
+
+    if n == 1  {
+        return [0]
+    } else  {
+        
+        for _ in 2..<n {
+            let nextNumber = result[result.count - 1] + result[result.count - 2]
+            result.append(nextNumber)
+            
+        }}
+    return result
+}
 
