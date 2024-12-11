@@ -289,3 +289,8 @@ func mergeUnique2(_ array1: [Int], _ array2: [Int]) -> [Int] {
     Array(Set(array1).union(Set(array2)))
 }
 
+func maxDifference(_ numbers: [Int]) -> Int? {
+    guard let max = numbers.max(), let min = numbers.min() else { return nil}
+    return max - min
+}
+
