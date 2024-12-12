@@ -294,3 +294,7 @@ func maxDifference(_ numbers: [Int]) -> Int? {
     return max - min
 }
 
+func sortDictionaryByValues(_ dict: [String: Int]) -> [(String, Int)] {
+     dict.sorted{$0.value < $1.value}
+}
+
