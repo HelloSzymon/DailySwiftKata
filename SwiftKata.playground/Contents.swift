@@ -297,4 +297,7 @@ func maxDifference(_ numbers: [Int]) -> Int? {
 func sortDictionaryByValues(_ dict: [String: Int]) -> [(String, Int)] {
      dict.sorted{$0.value < $1.value}
 }
+func secondLargest(_ numbers: [Int]) -> Int? {
+     numbers.sorted{$0 > $1}[1]
+}
 
