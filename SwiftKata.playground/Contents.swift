@@ -301,3 +301,13 @@ func secondLargest(_ numbers: [Int]) -> Int? {
      numbers.sorted{$0 > $1}[1]
 }
 
+func countOccurrences(_ numbers: [Int]) -> [Int: Int] {
+    
+    var result: [Int : Int] = [:]
+    for number in numbers {
+        result[number, default: 0] += 1
+    }
+    return result
+}
+
+
