@@ -309,5 +309,9 @@ func countOccurrences(_ numbers: [Int]) -> [Int: Int] {
     }
     return result
 }
-
+func filterNumbers(_ numbers: [Int], _ condition: (Int) -> Bool) -> [Int] {
+    
+    numbers.filter(condition)
+    
+}
 
