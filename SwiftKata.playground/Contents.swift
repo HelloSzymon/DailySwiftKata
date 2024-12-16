@@ -315,3 +315,19 @@ func filterNumbers(_ numbers: [Int], _ condition: (Int) -> Bool) -> [Int] {
     
 }
 
+func maxNeighborSumIndex(_ numbers: [Int]) -> Int? {
+    guard numbers.count > 2 else { return nil }
+    
+    var maxSum = Int.min
+    var maxIndex: Int? = nil
+
+    for i in 1..<numbers.count - 1 {
+        let neighborSum = numbers[i - 1] + numbers[i] + numbers[i + 1]
+        if neighborSum > maxSum {
+            maxSum = neighborSum
+            maxIndex = i
+        }
+    }
+    
+    return maxIndex
+}
