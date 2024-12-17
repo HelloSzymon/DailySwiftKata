@@ -331,3 +331,9 @@ func maxNeighborSumIndex(_ numbers: [Int]) -> Int? {
     
     return maxIndex
 }
+
+func isPermutation(_ numbers: [Int]) -> Bool {
+ 
+    Set(1...numbers.count) == Set(numbers)
+    
+}
