@@ -337,3 +337,11 @@ func isPermutation(_ numbers: [Int]) -> Bool {
     Set(1...numbers.count) == Set(numbers)
     
 }
+
+func pairSums(_ numbers: [Int]) -> [Int] {
+    var result: [Int] = []
+    for i in stride(from: 0, to: numbers.count - 1, by: 2 ) {
+        result.append(numbers[i] + numbers[i + 1])
+    }
+    return result
+}
