@@ -345,3 +345,14 @@ func pairSums(_ numbers: [Int]) -> [Int] {
     }
     return result
 }
+
+func isArithmeticSequence(_ numbers: [Int]) -> Bool {
+    guard numbers.count >= 2 else { return false }
+    let difference = numbers[1] - numbers[0]
+    for i in 1..<numbers.count - 1 {
+        if numbers[i + 1] - numbers[i] != difference {
+            return false
+        }
+    }
+    return true
+}
