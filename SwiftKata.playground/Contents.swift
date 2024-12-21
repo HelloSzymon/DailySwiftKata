@@ -361,3 +361,15 @@ func canBeAnagram(_ word1: String, _ word2: String) -> Bool {
     word1.sorted() == word2.sorted()
 }
 
+
+func twoSum(_ numbers: [Int], _ target: Int) -> (Int, Int)? {
+    for (i, number) in numbers.enumerated() {
+        let comp = target - number
+        for (j, other) in numbers.enumerated() where i != j {
+            if other == comp {
+                return (i, j)
+            }
+        }
+    }
+    return nil
+}
