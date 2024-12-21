@@ -356,3 +356,8 @@ func isArithmeticSequence(_ numbers: [Int]) -> Bool {
     }
     return true
 }
+
+func canBeAnagram(_ word1: String, _ word2: String) -> Bool {
+    word1.sorted() == word2.sorted()
+}
+
