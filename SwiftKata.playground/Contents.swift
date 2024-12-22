@@ -373,3 +373,14 @@ func twoSum(_ numbers: [Int], _ target: Int) -> (Int, Int)? {
     }
     return nil
 }
+
+func generateTriangleNumbers(_ n: Int) -> [Int] {
+    var result = [Int]()
+    var sum = 0
+    for i in 1..<n {
+        sum = sum + i
+        result.append(sum)
+    }
+    
+    return result
+}
