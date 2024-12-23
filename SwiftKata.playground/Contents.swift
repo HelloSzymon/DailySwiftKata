@@ -384,3 +384,24 @@ func generateTriangleNumbers(_ n: Int) -> [Int] {
     
     return result
 }
+
+func gcd(_ a: Int, _ b: Int) -> Int {
+    let remainder = abs(a) % abs(b)
+    if remainder != 0 {
+        return gcd(b, remainder)
+    } else {
+        return abs(b)
+    }
+}
+
+func gcdWhile(_ a: Int, _ b: Int) -> Int {
+    var a = abs(a)
+    var b = abs(b)
+    
+    while b != 0  {
+        let remainder = a % b
+        a = b
+        b = remainder }
+    
+return a
+}
