@@ -405,3 +405,7 @@ func gcdWhile(_ a: Int, _ b: Int) -> Int {
     
 return a
 }
+
+func countUnique(_ numbers: [Int]) -> Int {
+    Set(numbers).count
+}
