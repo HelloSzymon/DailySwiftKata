@@ -409,3 +409,17 @@ return a
 func countUnique(_ numbers: [Int]) -> Int {
     Set(numbers).count
 }
+
+func reverseString(_ string: String) -> String {
+    String(string.reversed())
+}
+
+func reverseStringReccurence(_ string: String) -> String {
+    guard string.count > 1 else {return string}
+    
+    let firstCharacter = string.first!
+    let remainingCharacter = string.dropFirst()
+    return reverseString(String(remainingCharacter)) + String(firstCharacter)
+    
+}
+
