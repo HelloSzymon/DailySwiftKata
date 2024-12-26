@@ -422,4 +422,14 @@ func reverseStringReccurence(_ string: String) -> String {
     return reverseString(String(remainingCharacter)) + String(firstCharacter)
     
 }
-
+func sumOfDigits3(_ number: Int) -> Int {
+   
+    var sum = 0
+    var number = number
+    
+    while number > 0 {
+        sum += number % 10
+        number /= 10
+    }
+    return sum
+}
