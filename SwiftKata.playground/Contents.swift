@@ -433,3 +433,12 @@ func sumOfDigits3(_ number: Int) -> Int {
     }
     return sum
 }
+
+func reverseArray(_ array: [Int]) -> [Int] {
+    guard !array.isEmpty else {return []}
+    var firstNumber = array.first!
+    var restNumber = Array(array.dropFirst())
+    
+    
+    return reverseArray(restNumber + [firstNumber])
+}
