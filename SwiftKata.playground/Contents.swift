@@ -442,3 +442,16 @@ func reverseArray(_ array: [Int]) -> [Int] {
     
     return reverseArray(restNumber + [firstNumber])
 }
+
+func isPrime2(_ number: Int) -> Bool {
+    if number <= 1 {
+        return false
+    }
+    
+    for i in 2..<Int(sqrt(Double(number))) {
+        if number % i == 0 {
+            return false
+        }
+    }
+    return true
+}
