@@ -455,3 +455,13 @@ func isPrime2(_ number: Int) -> Bool {
     }
     return true
 }
+
+func fibonacciRecursive(_ n: Int) -> Int {
+    if n == 0 {
+        return 0
+    } else if n  == 1 {
+        return 1
+    }
+    
+    return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2)
+}
