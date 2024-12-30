@@ -465,3 +465,19 @@ func fibonacciRecursive(_ n: Int) -> Int {
     
     return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2)
 }
+
+func filterDivisible(_ numbers: [Int], by divisor: Int) -> [Int] {
+    var result = [Int]()
+    
+    for i in numbers {
+        if i % divisor == 0 {
+            result.append(i)
+        }
+    }
+    return result
+    
+}
+
+func filterDivisible2(_ numbers: [Int], by divisor: Int) -> [Int] {
+    numbers.filter{$0 % divisor == 0}
+}
