@@ -481,3 +481,14 @@ func filterDivisible(_ numbers: [Int], by divisor: Int) -> [Int] {
 func filterDivisible2(_ numbers: [Int], by divisor: Int) -> [Int] {
     numbers.filter{$0 % divisor == 0}
 }
+
+func findMissingNumber(_ numbers: [Int]) -> Int {
+    var sortedNumber = numbers.sorted()
+    for i in 1...sortedNumber.count {
+      
+        if sortedNumber[i - 1] != i {
+            return i
+        }
+    }
+    return sortedNumber.count + 1
+}
