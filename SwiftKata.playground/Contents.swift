@@ -492,3 +492,9 @@ func findMissingNumber(_ numbers: [Int]) -> Int {
     }
     return sortedNumber.count + 1
 }
+
+func countVowels(_ string: String) -> Int {
+    
+    let vovels: Set<Character> = ["a", "e", "i", "o", "u"]
+    return string.lowercased().filter{vovels.contains($0)}.count
+}
