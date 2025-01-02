@@ -498,3 +498,16 @@ func countVowels(_ string: String) -> Int {
     let vovels: Set<Character> = ["a", "e", "i", "o", "u"]
     return string.lowercased().filter{vovels.contains($0)}.count
 }
+
+func isPowerOfTwo(_ number: Int) -> Bool {
+    guard number > 0 else {return false}
+    var num = number
+    
+    while num > 1 {
+        if num % 2 != 0 {
+            return false
+        }
+        num /= 2
+    }
+    return true
+}
