@@ -511,3 +511,22 @@ func isPowerOfTwo(_ number: Int) -> Bool {
     }
     return true
 }
+
+func gcdOfThree(_ a: Int, _ b: Int, _ c: Int) -> Int {
+    var a = abs(a)
+    var b = abs(b)
+    var c = abs(c)
+
+    while b != 0 {
+        let rest = a % b
+        a = b
+        b = rest
+    }
+
+    while c != 0 {
+        let rest = a % c
+        a = c
+        c = rest
+    }
+    return a
+}
