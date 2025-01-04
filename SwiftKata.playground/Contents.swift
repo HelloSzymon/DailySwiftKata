@@ -530,3 +530,15 @@ func gcdOfThree(_ a: Int, _ b: Int, _ c: Int) -> Int {
     }
     return a
 }
+
+func isPerfectNumber(_ number: Int) -> Bool {
+
+    var sum = 0
+    for i in 1..<number {
+        if number % i == 0 {
+            sum += i
+        }
+    }
+
+    return sum == number
+}
