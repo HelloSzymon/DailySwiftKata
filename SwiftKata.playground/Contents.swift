@@ -542,3 +542,17 @@ func isPerfectNumber(_ number: Int) -> Bool {
 
     return sum == number
 }
+func reverseNumber(_ number: Int) -> Int {
+     var reversed = 0
+    var number = number
+    var digit = 0
+
+    while number != 0 {
+        digit = number % 10
+        reversed = reversed * 10 + digit
+        number = number / 10
+    }
+
+
+    return reversed
+}
