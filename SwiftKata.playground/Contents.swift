@@ -556,3 +556,13 @@ func reverseNumber(_ number: Int) -> Int {
 
     return reversed
 }
+
+func commonElementss(_ array1: [Int], _ array2: [Int]) -> [Int] {
+    guard array1.isEmpty, array2.isEmpty else {return []}
+    let set1 = Set(array1.sorted())
+    let set2 = Set(array2.sorted())
+
+    let result = Array(set1.intersection(set2))
+
+    return result
+}
