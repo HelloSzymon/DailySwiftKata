@@ -566,3 +566,18 @@ func commonElementss(_ array1: [Int], _ array2: [Int]) -> [Int] {
 
     return result
 }
+
+func toBinary(_ number: Int) -> String {
+    var result = ""
+    var number = number
+    while number != 0 {
+        if number % 2 == 0 {
+            result +=  "0"
+
+        } else {
+            result += "1"
+        }
+        number /= 2
+    }
+    return String(result.reversed())
+}
