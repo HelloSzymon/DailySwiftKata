@@ -581,3 +581,17 @@ func toBinary(_ number: Int) -> String {
     }
     return String(result.reversed())
 }
+
+func isNumericPalindrome(_ number: Int) -> Bool {
+    var number = number
+    var result = 0
+    let firstNumber = number
+var digit = 0
+    while number != 0 {
+        digit = number % 10
+        result = result * 10 + digit
+        number = number / 10
+    }
+    return  result == firstNumber
+
+}
