@@ -595,3 +595,12 @@ var digit = 0
     return  result == firstNumber
 
 }
+
+func numberToWords(_ number: Int) -> String {
+
+    let formatter = NumberFormatter()
+    formatter.numberStyle = .spellOut
+    return formatter.string(from: number as NSNumber) ?? "Invalid number"
+
+
+}
