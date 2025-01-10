@@ -604,3 +604,13 @@ func numberToWords(_ number: Int) -> String {
 
 
 }
+
+func countCharacterOccurrences(_ string: String) -> [Character: Int] {
+    var result = [Character : Int]()
+    for i in string {
+        result[i, default: 0] += 1
+    }
+
+
+    return result
+}
