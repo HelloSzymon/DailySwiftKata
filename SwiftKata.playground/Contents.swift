@@ -614,3 +614,14 @@ func countCharacterOccurrences(_ string: String) -> [Character: Int] {
 
     return result
 }
+
+func factorial(_ n: Int) -> Int {
+    var n = n
+    var result = 1
+    while n != 0 {
+        result = result * n
+        n -= 1
+    }
+
+    return result
+}
