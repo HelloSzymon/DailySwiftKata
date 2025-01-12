@@ -625,3 +625,9 @@ func factorial(_ n: Int) -> Int {
 
     return result
 }
+
+func areAnagrams(_ str1: String, _ str2: String) -> Bool {
+
+    str1.sorted() == str2.sorted()
+
+}
