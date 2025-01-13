@@ -631,3 +631,14 @@ func areAnagrams(_ str1: String, _ str2: String) -> Bool {
     str1.sorted() == str2.sorted()
 
 }
+func findSmallest(_ array: [Int]) -> Int {
+    var smallest = array[0]
+
+    for i in array {
+        if i < smallest {
+            smallest = i
+        }
+    }
+
+    return smallest
+}
