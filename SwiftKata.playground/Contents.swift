@@ -642,3 +642,28 @@ func findSmallest(_ array: [Int]) -> Int {
 
     return smallest
 }
+
+func findPrimes(_ n: Int) -> [Int] {
+    var n = n
+    var number = 2
+    var result = [Int]()
+
+    while number <= n {
+        var isPrime = true
+        var divider = 2
+
+        while divider * divider <= number {
+            if number % divider == 0 {
+                isPrime = false
+                break
+            }
+            divider += 1
+        }
+        if isPrime {
+            result.append(number)
+        }
+        number += 1
+    }
+    return result
+    }
+
