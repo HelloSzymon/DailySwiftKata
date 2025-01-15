@@ -667,3 +667,20 @@ func findPrimes(_ n: Int) -> [Int] {
     return result
     }
 
+func fibonacciIterative(_ n: Int) -> [Int] {
+    var result = [0, 1]
+
+    if n <= 0 {
+        return []
+    }
+    if n == 1  {
+        return [0] }
+
+            for _ in 2..<n {
+                let nextNumber = result[result.count - 1] + result[result.count - 2]
+                result.append(nextNumber)
+
+            }
+
+    return result
+}
