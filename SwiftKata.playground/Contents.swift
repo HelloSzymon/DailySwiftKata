@@ -696,3 +696,7 @@ func sumOfDigits4(_ number: Int) -> Int {
 
     return result
 }
+
+func reverseWord(_ word: String) -> String {
+    String(word.reversed())
+}
