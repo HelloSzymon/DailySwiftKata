@@ -700,3 +700,43 @@ func sumOfDigits4(_ number: Int) -> Int {
 func reverseWord(_ word: String) -> String {
     String(word.reversed())
 }
+
+func commonMultiples(_ a: Int, _ b: Int, _ n: Int) -> [Int] {
+    var multiple = a * b
+    var result = [Int]()
+
+    for i in 1...n {
+        result.append(multiple * i)
+    }
+
+    return result
+}
+
+func grandCommonDivider(a: Int, b : Int) -> Int {
+
+    var a = a
+    var b = b
+
+    while b != 0 {
+        let temp = b
+        b = b % a
+        a = temp
+
+    }
+
+    return a
+}
+
+func lowestCommonMultiples(a: Int, b: Int) -> Int {
+
+    a * b / (grandCommonDivider(a: a, b: b))
+}
+
+func commonMultiples2(_ a: Int, _ b: Int, _ n: Int) -> [Int] {
+
+    var result = [Int]()
+    for i in 1...n {
+        result.append(lowestCommonMultiples(a: a, b: b) * i)
+    }
+    return result
+}
