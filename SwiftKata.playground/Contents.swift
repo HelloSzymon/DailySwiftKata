@@ -740,3 +740,14 @@ func commonMultiples2(_ a: Int, _ b: Int, _ n: Int) -> [Int] {
     }
     return result
 }
+
+func mostFrequentNumber(_ array: [Int]) -> Int {
+
+    var frequency: [Int: Int] = [:]
+    for i in array {
+        frequency[i, default: 0] += 1
+    }
+
+    return frequency.max{
+        $0.value < $1.value || $0.value == $1.value && $0.key > $1.key}?.key ?? 0
+}
