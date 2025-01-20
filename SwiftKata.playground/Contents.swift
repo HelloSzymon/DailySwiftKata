@@ -751,3 +751,23 @@ func mostFrequentNumber(_ array: [Int]) -> Int {
     return frequency.max{
         $0.value < $1.value || $0.value == $1.value && $0.key > $1.key}?.key ?? 0
 }
+
+func isHappyNumber(_ number: Int) -> Bool {
+    var number = number
+    var seenNumber = Set<Int>()
+
+    while number != 1 {
+        let digits = String(number).compactMap { $0.wholeNumberValue }
+        let sumOfSquares = digits.map{$0 * $0}.reduce(0, + )
+
+        if seenNumber.contains(sumOfSquares) {
+            return false
+        }
+        seenNumber.insert(sumOfSquares)
+        number = sumOfSquares
+
+    }
+
+
+    return true
+}
