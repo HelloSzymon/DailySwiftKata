@@ -771,3 +771,27 @@ func isHappyNumber(_ number: Int) -> Bool {
 
     return true
 }
+
+func isPerfectNumber(number: Int) -> Bool {
+    var sum = 1
+
+    for i in 1..<number {
+        if number %  i == 0 {
+                sum += i
+            }
+
+        }
+    return sum == number
+
+}
+
+func perfectNumbersInRange(_ range: Int) -> [Int] {
+
+    var result = [Int]()
+    for number in 1...range {
+        if isPerfectNumber(number: number) {
+            result.append(number)
+        }
+    }
+    return result
+}
