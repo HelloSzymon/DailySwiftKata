@@ -795,3 +795,24 @@ func perfectNumbersInRange(_ range: Int) -> [Int] {
     }
     return result
 }
+
+func caesarCipher(_ text: String, _ shift: Int) -> String {
+    var moved = ""
+
+    for char in text {
+        if let asciiValue = char.asciiValue {
+            let isUpperCase = char.isUppercase
+            let base = isUpperCase ? Int(65) : Int(97)
+            let shiftedValue = (Int(asciiValue) - base + shift) % 26 + base
+
+            if let newChar = UnicodeScalar(shiftedValue) {
+                moved.append(Character(newChar))
+            }
+        } else {
+
+            moved.append(char)
+        }
+    }
+
+    return moved
+}
