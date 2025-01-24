@@ -828,3 +828,11 @@ func evenNumbers(_ array: [Int]) -> [Int] {
 
     return result
 }
+
+func countVowels2(_ text: String) -> Int {
+    let vowels: [Character] = ["a", "e", "i", "o", "u"]
+
+    return text.lowercased().filter{vowels.contains($0)}.count
+
+
+}
