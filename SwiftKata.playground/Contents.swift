@@ -816,3 +816,15 @@ func caesarCipher(_ text: String, _ shift: Int) -> String {
 
     return moved
 }
+
+func evenNumbers(_ array: [Int]) -> [Int] {
+    var result = [Int]()
+    for i in array {
+        if i % 2 == 0 {
+            result.append(i)
+        }
+    }
+
+
+    return result
+}
