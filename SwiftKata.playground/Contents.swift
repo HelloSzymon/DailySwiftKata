@@ -853,3 +853,10 @@ func fibonacciBelow(_ n: Int) -> [Int] {
 
     return fib
 }
+
+func wordCount(_ text: String) -> Int {
+
+    text.split(separator: " ").count
+
+
+}
