@@ -836,3 +836,20 @@ func countVowels2(_ text: String) -> Int {
 
 
 }
+
+func fibonacciBelow(_ n: Int) -> [Int] {
+    var fib = [0, 1]
+
+    guard n > 1 else {return []}
+
+    while true {
+        let nextFib = fib[fib.count - 1] + fib[fib.count - 2]
+        if nextFib >= n {
+            break
+        }
+        fib.append(nextFib)
+    }
+
+
+    return fib
+}
