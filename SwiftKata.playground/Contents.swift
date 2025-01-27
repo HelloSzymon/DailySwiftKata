@@ -860,3 +860,8 @@ func wordCount(_ text: String) -> Int {
 
 
 }
+
+func mirrorArray(_ array: [Int]) -> [Int] {
+    array + array.reversed()
+
+}
