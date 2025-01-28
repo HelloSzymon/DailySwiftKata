@@ -865,3 +865,6 @@ func mirrorArray(_ array: [Int]) -> [Int] {
     array + array.reversed()
 
 }
+func sortDigits(_ number: Int) -> Int {
+     Int(String(number).split(separator: "").sorted().joined()) ?? 0
+}
