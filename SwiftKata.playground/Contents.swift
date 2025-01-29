@@ -868,3 +868,26 @@ func mirrorArray(_ array: [Int]) -> [Int] {
 func sortDigits(_ number: Int) -> Int {
      Int(String(number).split(separator: "").sorted().joined()) ?? 0
 }
+
+func primeNumbersInRange(_ range: Int) -> [Int] {
+
+    guard range >= 2 else {return [] }
+    var result = [Int]()
+
+
+    for num in 2...range {
+        var isPrime = true
+
+        for divisor in 2..<Int(sqrt(Double(range))) + 1 {
+            if num % divisor == 0 {
+                isPrime = false
+                break
+            }
+        }
+        if isPrime {
+            result.append(num)
+        }
+    }
+
+    return result
+}
