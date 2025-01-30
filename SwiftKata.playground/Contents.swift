@@ -891,3 +891,10 @@ func primeNumbersInRange(_ range: Int) -> [Int] {
 
     return result
 }
+
+func numberToWords2(_ number: Int) -> String {
+    var numFormatter = NumberFormatter()
+    numFormatter.numberStyle = .spellOut
+    numFormatter.locale = .init(identifier: "pl_PL")
+    return numFormatter.string(from: NSNumber(value: number)) ?? "zero"
+}
