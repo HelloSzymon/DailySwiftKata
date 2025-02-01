@@ -902,3 +902,18 @@ func numberToWords2(_ number: Int) -> String {
 func isAnagram(_ first: String, _ second: String) -> Bool {
     first.sorted() == second.sorted()
 }
+
+func greatestCommonDivisor(_ a: Int, _ b: Int) -> Int {
+
+    var a = a
+    var b =  b
+
+    while b != 0 {
+        var temp = b
+        b = a % b
+        a = temp
+    }
+    return a
+
+
+}
