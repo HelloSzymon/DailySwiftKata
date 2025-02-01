@@ -898,3 +898,7 @@ func numberToWords2(_ number: Int) -> String {
     numFormatter.locale = .init(identifier: "pl_PL")
     return numFormatter.string(from: NSNumber(value: number)) ?? "zero"
 }
+
+func isAnagram(_ first: String, _ second: String) -> Bool {
+    first.sorted() == second.sorted()
+}
