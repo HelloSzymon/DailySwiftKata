@@ -917,3 +917,10 @@ func greatestCommonDivisor(_ a: Int, _ b: Int) -> Int {
 
 
 }
+
+
+func isPalindromeNumber(_ number: Int) -> Bool {
+    var number  = String(number)
+    var number2 = String(number.reversed())
+    return    number == number2
+}
