@@ -924,3 +924,24 @@ func isPalindromeNumber(_ number: Int) -> Bool {
     var number2 = String(number.reversed())
     return    number == number2
 }
+
+func rot13(_ text: String) -> String {
+
+    var result = String()
+    for char in text {
+
+        if let asciiValue = char.asciiValue {
+            let isUppercased = char.isUppercase
+            let base = isUppercased ? UInt8(65) : UInt8(87)
+
+            if char.isLetter {
+                let shifted = (asciiValue - base + 13) % 26 + base
+                result.append(Character(UnicodeScalar(shifted)))
+            } else {
+                result.append(char)
+            }
+        }
+    }
+
+    return result
+}
