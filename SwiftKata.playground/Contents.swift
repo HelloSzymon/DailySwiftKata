@@ -945,3 +945,16 @@ func rot13(_ text: String) -> String {
 
     return result
 }
+
+func countOccurrences2(_ array: [Int]) -> [Int: Int] {
+
+    var result = [Int: Int]()
+    for i in array {
+
+        result[i, default: 0] += 1
+
+    }
+
+    return result
+
+}
