@@ -958,3 +958,11 @@ func countOccurrences2(_ array: [Int]) -> [Int: Int] {
     return result
 
 }
+
+func secondLargest2(_ array: [Int]) -> Int? {
+    guard array.count >= 2 else { return nil }
+    var sorted = Array(Set(array).sorted())
+    guard sorted.count >= 2 else {return nil}
+    return sorted[sorted.count - 2]
+
+}
