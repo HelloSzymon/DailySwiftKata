@@ -966,3 +966,12 @@ func secondLargest2(_ array: [Int]) -> Int? {
     return sorted[sorted.count - 2]
 
 }
+
+func sumDigits(_ number: Int) -> Int {
+
+    String(abs(number))
+        .compactMap{Int(String($0))}
+        .reduce(0, +)
+
+
+}
