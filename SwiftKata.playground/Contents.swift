@@ -988,3 +988,11 @@ func isPerfectNumber2(_ number: Int) -> Bool {
 
     return sum == number
 }
+
+func reverseWords3(_ text: String) -> String {
+
+    let words = text.components(separatedBy: CharacterSet.whitespaces)
+      return words.reversed().joined(separator: " ")
+
+
+}
