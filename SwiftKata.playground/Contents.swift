@@ -996,3 +996,7 @@ func reverseWords3(_ text: String) -> String {
 
 
 }
+
+func uniqueCharacters(_ text: String) -> Bool {
+    Set(text).count == text.count
+}
