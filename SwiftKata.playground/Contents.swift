@@ -1000,3 +1000,13 @@ func reverseWords3(_ text: String) -> String {
 func uniqueCharacters(_ text: String) -> Bool {
     Set(text).count == text.count
 }
+
+func rotateArray(_ array: [Int], _ n: Int) -> [Int] {
+
+
+    guard !array.isEmpty else {return []}
+    let shift = n % array.count
+
+
+    return Array(array.suffix(shift) + array.dropLast(shift))
+}
