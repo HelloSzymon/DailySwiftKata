@@ -1010,3 +1010,25 @@ func rotateArray(_ array: [Int], _ n: Int) -> [Int] {
 
     return Array(array.suffix(shift) + array.dropLast(shift))
 }
+
+func multiplyMatrices(_ a: [[Int]], _ b: [[Int]]) -> [[Int]]? {
+
+    let rowsA = a.count
+    let colsA = a.first?.count ?? 0
+    let rowsb = b.count
+    let colsb = b.first?.count ?? 0
+
+    guard colsA == rowsb else {return nil}
+
+    var result = Array(repeating: Array(repeating: 0, count: colsb), count: rowsA)
+
+    for i in 0..<rowsA {
+        for j in 0..<colsb {
+            for k in 0..<colsA {
+                result[i][j] += a[i][k] * b[k][j]
+            }
+        }
+    }
+
+    return result
+}
