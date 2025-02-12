@@ -1032,3 +1032,7 @@ func multiplyMatrices(_ a: [[Int]], _ b: [[Int]]) -> [[Int]]? {
 
     return result
 }
+func lastWord(_ text: String) -> String {
+
+    text.components(separatedBy: .whitespaces).filter{$0.isEmpty}.last ?? ""
+}
