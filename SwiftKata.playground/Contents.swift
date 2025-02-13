@@ -1036,3 +1036,9 @@ func lastWord(_ text: String) -> String {
 
     text.components(separatedBy: .whitespaces).filter{$0.isEmpty}.last ?? ""
 }
+
+func removeDuplicates(_ array: [Int]) -> [Int] {
+
+    var seen = Set<Int>()
+    return array.filter{seen.insert($0).inserted}
+}
