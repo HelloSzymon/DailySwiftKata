@@ -1042,3 +1042,11 @@ func removeDuplicates(_ array: [Int]) -> [Int] {
     var seen = Set<Int>()
     return array.filter{seen.insert($0).inserted}
 }
+
+func rotateLeft(_ array: [Int], _ n: Int) -> [Int] {
+    guard !array.isEmpty else {return []}
+    let shift = n % array.count
+
+    return Array(array.dropFirst(shift) + array.prefix(shift))
+
+}
