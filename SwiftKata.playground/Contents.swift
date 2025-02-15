@@ -1050,3 +1050,7 @@ func rotateLeft(_ array: [Int], _ n: Int) -> [Int] {
     return Array(array.dropFirst(shift) + array.prefix(shift))
 
 }
+func reverseMatrix(_ matrix: [[Int]]) -> [[Int]] {
+
+    Array(matrix.reversed())
+}
