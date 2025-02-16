@@ -1054,3 +1054,18 @@ func reverseMatrix(_ matrix: [[Int]]) -> [[Int]] {
 
     Array(matrix.reversed())
 }
+
+func isPowerOfTwo2(_ number: Int) -> Bool {
+
+    guard number > 0 else {return false}
+    var num = number
+
+    while num > 1 {
+        if num % 2 != 0 {
+            return false }
+        else {
+            num /= 2
+        }
+    }
+    return true
+}
