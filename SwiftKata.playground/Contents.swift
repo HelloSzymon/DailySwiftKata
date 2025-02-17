@@ -1069,3 +1069,8 @@ func isPowerOfTwo2(_ number: Int) -> Bool {
     }
     return true
 }
+
+func countUnique2(_ array: [Int]) -> Int {
+
+     Set(array).count
+}
