@@ -1074,3 +1074,11 @@ func countUnique2(_ array: [Int]) -> Int {
 
      Set(array).count
 }
+
+func diagonalSum(_ matrix: [[Int]]) -> Int {
+    var sum =  0
+    for i in 0..<matrix.count {
+        sum += matrix[i][i]
+    }
+    return sum
+}
