@@ -1095,3 +1095,19 @@ func findMedian(_ array: [Int]) -> Double? {
         return (Double(sortedArray[mid - 1]) + Double(sortedArray[mid])) / 2
     }
 }
+
+func isPrime4(_ number: Int) -> Bool {
+
+    if number <= 1 {
+        return false
+    }
+
+    for i in 2 ..< Int(sqrt(Double(number))) {
+
+        if number % i == 0 {
+            return false
+        }
+
+    }
+    return true
+}
