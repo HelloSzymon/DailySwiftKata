@@ -1082,3 +1082,16 @@ func diagonalSum(_ matrix: [[Int]]) -> Int {
     }
     return sum
 }
+
+func findMedian(_ array: [Int]) -> Double? {
+    guard !array.isEmpty else { return nil }
+
+    let sortedArray = array.sorted()
+    let mid = sortedArray.count / 2
+
+    if sortedArray.count % 2 != 0 {
+        return Double(sortedArray[mid])
+    } else {
+        return (Double(sortedArray[mid - 1]) + Double(sortedArray[mid])) / 2
+    }
+}
