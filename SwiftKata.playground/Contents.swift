@@ -1111,4 +1111,13 @@ func isPrime(_ number: Int) -> Bool {
 
     return true
 }
+func rotateRight(_ array: [Int], _ n: Int) -> [Int] {
+    guard !array.isEmpty else {return []}
+    let shift = n % array.count
 
+    return Array(array.suffix(shift) + array.prefix(array.count - shift))
+
+
+
+
+}
