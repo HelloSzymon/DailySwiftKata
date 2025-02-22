@@ -1098,7 +1098,7 @@ func findMedian(_ array: [Int]) -> Double? {
 
 import Foundation
 
-func isPrime(_ number: Int) -> Bool {
+func isPrime4(_ number: Int) -> Bool {
     if number <= 1 {
         return false
     }
@@ -1120,4 +1120,20 @@ func rotateRight(_ array: [Int], _ n: Int) -> [Int] {
 
 
 
+}
+
+func transposeMatrix(_ matrix: [[Int]]) -> [[Int]] {
+    guard !matrix.isEmpty else {return []}
+    let row = matrix.count
+    let column = matrix[0].count
+
+    var transposed = Array(repeating: Array(repeating: 0, count: row), count: column)
+
+    for i in 0..<row {
+        for j in 0..<column {
+            transposed[j][i] = matrix[i][j]
+        }
+    }
+
+    return transposed
 }
