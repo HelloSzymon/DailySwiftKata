@@ -1137,3 +1137,8 @@ func transposeMatrix(_ matrix: [[Int]]) -> [[Int]] {
 
     return transposed
 }
+func sumInRange(_ a: Int, _ b: Int) -> Int {
+
+    Array(a...b).reduce(0, +)
+
+}
