@@ -1142,3 +1142,9 @@ func sumInRange(_ a: Int, _ b: Int) -> Int {
     Array(a...b).reduce(0, +)
 
 }
+
+func dotProduct(_ a: [Int], _ b: [Int]) -> Int? {
+
+    guard a.count == b.count else { return nil }
+    return zip(a, b).map(*).reduce(0, +)
+}
