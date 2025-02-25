@@ -1148,3 +1148,10 @@ func dotProduct(_ a: [Int], _ b: [Int]) -> Int? {
     guard a.count == b.count else { return nil }
     return zip(a, b).map(*).reduce(0, +)
 }
+
+func isPalindrome3(_ text: String) -> Bool {
+
+    text == String(text.reversed())
+
+
+}
