@@ -1155,3 +1155,11 @@ func isPalindrome3(_ text: String) -> Bool {
 
 
 }
+func reverseWords4(_ text: String) -> String {
+
+    text.components(separatedBy: " ").reversed().joined(separator: " ")
+
+
+
+
+}
