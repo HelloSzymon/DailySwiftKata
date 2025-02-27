@@ -1163,3 +1163,34 @@ func reverseWords4(_ text: String) -> String {
 
 
 }
+func factorial3(_ n: Int) -> Int {
+    var n = n
+    var result = 1
+    while n != 0 {
+
+        result = result * n
+        n -= 1
+    }
+
+
+    return result
+}
+
+func factorialRecurrence(_ n: Int) -> Int {
+
+    guard n > 1 else {return 1}
+
+
+    return n * factorialRecurrence(n - 1)
+}
+
+func factorialIterative(_ n: Int) -> Int {
+
+    var result = 1
+
+    for i in 1...max(1, n) {
+        result *= n
+    }
+
+    return result
+}
