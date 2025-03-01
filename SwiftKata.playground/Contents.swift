@@ -1194,3 +1194,15 @@ func factorialIterative(_ n: Int) -> Int {
 
     return result
 }
+
+func mostFrequentElement2(_ array: [Int]) -> Int? {
+    guard !array.isEmpty else {return nil}
+    var resul = [Int: Int]()
+
+    for i in array {
+
+        resul[i, default: 0] += 1
+    }
+
+    return resul.max {$0.value < $1.value}?.key
+}
