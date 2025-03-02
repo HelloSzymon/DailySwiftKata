@@ -1206,3 +1206,29 @@ func mostFrequentElement2(_ array: [Int]) -> Int? {
 
     return resul.max {$0.value < $1.value}?.key
 }
+
+func rotateMatrix(_ matrix: [[Int]]) -> [[Int]] {
+
+    guard !matrix.isEmpty else {return []}
+    let transposed = transposeMatrix2(matrix)
+    return transposed.map{$0.reversed()}
+
+}
+
+func transposeMatrix2(_ matrix: [[Int]]) -> [[Int]] {
+    guard !matrix.isEmpty else  {return []}
+
+    let rows = matrix.count
+    let cols = matrix[0].count
+
+    var transposed = Array(repeating: Array(repeating: 0, count: rows), count: cols)
+
+    for i in 0...rows {
+        for j in 0..<cols {
+            transposed[j][i] = matrix[i][j]
+        }
+    }
+    return transposed
+
+}
+
