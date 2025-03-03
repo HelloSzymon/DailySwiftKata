@@ -1232,3 +1232,19 @@ func transposeMatrix2(_ matrix: [[Int]]) -> [[Int]] {
 
 }
 
+func longestCommonPrefix(_ words: [String]) -> String {
+
+    var key = ""
+    var tem = Array(words[0])
+
+    for i in 0..<tem.count {
+        key.append(tem[i])
+        for item in words {
+            if !item.hasPrefix(key) {
+                return String(key.dropLast(1))
+            }
+        }
+    }
+
+    return key
+}
