@@ -1248,3 +1248,23 @@ func longestCommonPrefix(_ words: [String]) -> String {
 
     return key
 }
+
+func permutations(_ text: String) -> [String] {
+
+    if text.count <= 1 {
+        return [text]
+    }
+    var result: [String] = []
+
+    for (index,char) in text.enumerated() {
+        var remaining = text
+        remaining.remove(at: remaining.index(text.startIndex, offsetBy: index))
+        let subPermutations = permutations(remaining)
+
+        for perm in subPermutations {
+            result.append(String(char) + perm)
+        }
+    }
+
+    return result
+}
