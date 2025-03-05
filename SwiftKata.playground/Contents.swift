@@ -1268,3 +1268,8 @@ func permutations(_ text: String) -> [String] {
 
     return result
 }
+func areAnagrams2(_ a: String, _ b: String) -> Bool {
+
+    a.sorted() == b.sorted()
+
+}
