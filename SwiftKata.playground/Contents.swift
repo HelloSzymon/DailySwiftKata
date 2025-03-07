@@ -1287,3 +1287,17 @@ func insertionSort(_ array: [Int]) -> [Int] {
     }
     return array
 }
+
+func fibonacci5(_ n: Int) -> Int {
+
+    if n == 0 {
+        return 0
+    } else if n == 1 {
+        return 1
+    }
+
+    return fibonacci5(n - 1) + fibonacci5(n - 2)
+
+}
+
+fibonacci5(10)
