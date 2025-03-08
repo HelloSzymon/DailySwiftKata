@@ -1300,4 +1300,19 @@ func fibonacci5(_ n: Int) -> Int {
 
 }
 
-fibonacci5(10)
+func rotateMatrix180(_ matrix: [[Int]]) -> [[Int]] {
+    guard !matrix.isEmpty else {return []}
+
+    return matrix.reversed().map{$0.reversed()}
+}
+
+let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+rotateMatrix180(matrix)
+print(rotateMatrix180(matrix))
+
+
