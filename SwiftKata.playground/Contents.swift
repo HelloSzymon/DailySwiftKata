@@ -1312,7 +1312,12 @@ let matrix = [
     [7, 8, 9]
 ]
 
-rotateMatrix180(matrix)
-print(rotateMatrix180(matrix))
+func secondSmallest(_ array: [Int]) -> Int? {
+    guard array.count >= 2 else {return nil }
+
+    return array.sorted()[1]
+
+}
+secondSmallest([5, 3, 1, 2, 4])
 
 
