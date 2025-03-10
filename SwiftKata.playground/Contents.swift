@@ -1318,6 +1318,20 @@ func secondSmallest(_ array: [Int]) -> Int? {
     return array.sorted()[1]
 
 }
-secondSmallest([5, 3, 1, 2, 4])
 
 
+
+func isPerfectNumber3(_ n: Int) -> Bool {
+
+    var sum = 0
+
+    for i in 1..<n {
+        if n % i == 0 {
+            sum += i
+        }
+    }
+
+    return sum == n
+
+}
+isPerfectNumber3(6)
