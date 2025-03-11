@@ -1334,4 +1334,23 @@ func isPerfectNumber3(_ n: Int) -> Bool {
     return sum == n
 
 }
-isPerfectNumber3(6)
+
+func generateSubsets(_ array: [Int]) -> [[Int]] {
+
+    var result = [[Int]]()
+
+    func backtrack(_ index: Int, _ currentSubset: [Int]) {
+        if index == array.count {
+            result.append(currentSubset)
+            return
+        }
+
+        backtrack(index + 1, currentSubset)
+
+        backtrack(index + 1, currentSubset + [array[index]])
+    }
+    backtrack(0, [])
+    return result
+
+
+}
