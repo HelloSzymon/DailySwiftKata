@@ -1354,3 +1354,8 @@ func generateSubsets(_ array: [Int]) -> [[Int]] {
 
 
 }
+
+func removeDuplicates2(_ array: [Int]) -> [Int] {
+    Array(Set(array)).sorted()
+}
+removeDuplicates2([4, 2, 2, 1, 3, 4, 1]) 
