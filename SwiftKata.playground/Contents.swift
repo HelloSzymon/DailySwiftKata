@@ -1358,4 +1358,15 @@ func generateSubsets(_ array: [Int]) -> [[Int]] {
 func removeDuplicates2(_ array: [Int]) -> [Int] {
     Array(Set(array)).sorted()
 }
-removeDuplicates2([4, 2, 2, 1, 3, 4, 1]) 
+
+
+func mostFrequentElement3(_ array: [Int]) -> Int? {
+
+    guard !array.isEmpty else {return nil}
+    var dic = [Int:Int]()
+    for i in array {
+        dic[i, default: 0] += 1
+    }
+    return dic.max{$0.value < $1.value}?.key
+}
+mostFrequentElement3([1, 3, 2, 3, 3, 4, 2, 1, 3])
