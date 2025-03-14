@@ -1369,4 +1369,25 @@ func mostFrequentElement3(_ array: [Int]) -> Int? {
     }
     return dic.max{$0.value < $1.value}?.key
 }
-mostFrequentElement3([1, 3, 2, 3, 3, 4, 2, 1, 3])
+func rotateMatrix270(_ matrix: [[Int]]) -> [[Int]] {
+
+    guard !matrix.isEmpty else {return []}
+    var col = matrix.count
+    var rows = matrix[0].count
+
+    var rotated = Array(repeating: Array(repeating: 0, count: rows), count: col)
+    for i in 0..<rows {
+        for j in 0..<col {
+            rotated[j][rows - 1 - i] = matrix[i][j]
+        }
+    }
+
+    return rotated
+
+}
+let matrix2 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+rotateMatrix270(matrix)
