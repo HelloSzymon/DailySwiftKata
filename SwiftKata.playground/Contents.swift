@@ -1390,4 +1390,14 @@ let matrix2 = [
     [4, 5, 6],
     [7, 8, 9]
 ]
-rotateMatrix270(matrix)
+
+func isPalindrome(_ num: Int) -> Bool {
+
+    String(num) ==    String((String(num).reversed()))
+
+}
+
+isPalindrome(121)
+
+
+
