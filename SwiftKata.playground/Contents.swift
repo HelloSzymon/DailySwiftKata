@@ -1397,7 +1397,13 @@ func isPalindrome(_ num: Int) -> Bool {
 
 }
 
-isPalindrome(121)
+
+func reverseWords5(_ sentence: String) -> String {
+
+    sentence.split(separator: " ", omittingEmptySubsequences: true).reversed().joined(separator: " ")
+
+}
+reverseWords5("Hello world! ")
 
 
 
