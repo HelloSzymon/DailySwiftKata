@@ -1403,7 +1403,26 @@ func reverseWords5(_ sentence: String) -> String {
     sentence.split(separator: " ", omittingEmptySubsequences: true).reversed().joined(separator: " ")
 
 }
-reverseWords5("Hello world! ")
+func isValidBrackets(_ s: String) -> Bool {
+    var stack: [Character] = []
+    let matchningBrackets: [Character: Character] =  [")": "(", "}": "{", "]": "["]
+
+    for char in s {
+        if let openBracket = matchningBrackets[char] {
+            if stack.isEmpty || stack.removeLast() != openBracket {
+                return false
+            }
+        } else {
+            stack.append(char)
+        }
+    }
+
+
+    return stack.isEmpty
+}
+
+isValidBrackets("({[]})")
+
 
 
 
