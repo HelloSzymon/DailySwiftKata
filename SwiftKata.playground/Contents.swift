@@ -1421,7 +1421,27 @@ func isValidBrackets(_ s: String) -> Bool {
     return stack.isEmpty
 }
 
-isValidBrackets("({[]})")
+func generatePermutations(_ text: String) -> [String] {
+
+    var results = [String]()
+    var characters = Array(text)
+
+    generatePermutationsHelper(&characters, 0, result: &results)
+
+
+    return results}
+
+func generatePermutationsHelper(_ chars: inout [Character], _ index: Int, result: inout [String] ) {
+    if index == chars.count - 1 {
+        result.append(String(chars))
+        return
+    }
+    for i in index..<chars.count {
+        chars.swapAt(index, i)
+        generatePermutationsHelper(&chars, index + 1, result: &result)
+        chars.swapAt(index, i)
+    }
+}
 
 
 
