@@ -1442,7 +1442,18 @@ func generatePermutationsHelper(_ chars: inout [Character], _ index: Int, result
         chars.swapAt(index, i)
     }
 }
+func isPrime3(_ n: Int) -> Bool {
 
+    guard n >= 2 else {return false }
+
+    for i in 2...Int(sqrt(Double(n))) {
+        if n % i == 0 {
+            return false
+        }
+    }
+    return true
+}
+isPrime(7)
 
 
 
