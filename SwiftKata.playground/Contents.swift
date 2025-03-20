@@ -1453,7 +1453,12 @@ func isPrime3(_ n: Int) -> Bool {
     }
     return true
 }
-isPrime(7)
+
+func flatten(_ array: [[Int]]) -> [Int] {
+    array.flatMap{$0}
+}
+
+
 
 
 
