@@ -1458,7 +1458,21 @@ func flatten(_ array: [[Int]]) -> [Int] {
     array.flatMap{$0}
 }
 
+func isPalindromeRecursive(_ text: String) -> Bool {
 
+    let cleanedText = text.filter{$0.isLetter || $0.isNumber}.lowercased()
+    if cleanedText.count < 1 {
+        return true
+    }
+    if cleanedText.first != cleanedText.last {
+        return false
+    }
+    return isPalindromeRecursive(String(cleanedText.dropFirst().dropLast()))
+
+
+}
+
+isPalindromeRecursive("kajak")
 
 
 
