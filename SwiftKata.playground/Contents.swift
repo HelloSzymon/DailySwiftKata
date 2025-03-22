@@ -1472,7 +1472,22 @@ func isPalindromeRecursive(_ text: String) -> Bool {
 
 }
 
-isPalindromeRecursive("kajak")
+func rotateMatrixLeft(_ matrix: [[Int]]) -> [[Int]] {
+    guard !matrix.isEmpty else {return []}
+    var col = matrix[0].count
+    var row = matrix.count
+    var matrix = Array(repeating: Array(repeating: 0, count: row), count: col)
+
+    for i in 1..<row {
+        for j in 1..<col {
+            matrix[col - 1 - j][i] = matrix[i][j]
+
+        }
+    }
+
+    return matrix
+}
+
 
 
 
