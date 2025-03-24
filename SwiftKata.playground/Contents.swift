@@ -1489,5 +1489,25 @@ func rotateMatrixLeft(_ matrix: [[Int]]) -> [[Int]] {
 }
 
 
+func generateSubstrings(_ text: String) -> [String] {
+
+    var result = [String]()
+
+    for i in 0..<text.count {
+
+        for j in i..<text.count {
+            let start = text.index(text.startIndex, offsetBy: i)
+            let end = text.index(text.startIndex, offsetBy: j + 1)
+            result.append(String(text[start..<end]))
+        }
+    }
+
+    return result
+}
+
+func countUniqueCharacters(_ text: String) -> Int {
+    guard !text.isEmpty else {return 0}
+    return Set(text).count
+}
 
 
