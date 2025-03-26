@@ -1510,4 +1510,34 @@ func countUniqueCharacters(_ text: String) -> Int {
     return Set(text).count
 }
 
+func generateSimplePermutations(_ text: String) -> [String] {
+
+    guard text.count > 1 else {return []}
+
+    if text.count == 1 {
+        return [text]
+    }
+    var result = [String]()
+
+    for (index, char) in text.enumerated() {
+
+        var remainingChars = text
+        remainingChars.remove(at: remainingChars.index(remainingChars.startIndex, offsetBy: index))
+        let permutations = generateSimplePermutations(remainingChars)
+        for perm in permutations {
+            result.append(String(char) + perm)
+        }
+    }
+
+    return result
+
+}
+
+func removeNonAlphabetic(_ text: String) -> String {
+text.filter{$0.isLetter}
+
+}
+
+removeNonAlphabetic("")
+
 
