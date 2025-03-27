@@ -1540,4 +1540,9 @@ text.filter{$0.isLetter}
 
 removeNonAlphabetic("")
 
+func longestWord(_ sentence: String) -> String {
+
+    String(sentence.filter{$0.isLetter || $0.isWhitespace}.split(separator: " ").max() ?? "")
+}
+longestWord("Ala ma kota, ale pies jest większy!")
 
