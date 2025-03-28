@@ -1307,9 +1307,8 @@ func rotateMatrix180(_ matrix: [[Int]]) -> [[Int]] {
 }
 
 let matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
+    [1, 2],
+    [4, 5]
 ]
 
 func secondSmallest(_ array: [Int]) -> Int? {
@@ -1546,3 +1545,23 @@ func longestWord(_ sentence: String) -> String {
 }
 longestWord("Ala ma kota, ale pies jest większy!")
 
+func rotateMatrix180second(_ matrix: [[Int]]) -> [[Int]] {
+
+    guard !matrix.isEmpty else { return [] }
+    let row = matrix.count
+    let col = matrix[0].count
+
+    var result = Array(repeating: Array(repeating: 0, count: col), count: row)
+
+    for i in 0..<row {
+        for j in 0..<col {
+            result[row - 1 - i][col - 1 - j] = matrix[i][j]
+        }
+    }
+
+    return result
+
+
+
+}
+rotateMatrix180second(matrix)
