@@ -1564,4 +1564,12 @@ func rotateMatrix180second(_ matrix: [[Int]]) -> [[Int]] {
 
 
 }
-rotateMatrix180second(matrix)
+
+func reverseStringRecursive(_ text: String) -> String {
+
+    guard text.count > 1 else {return text}
+
+    return String(text.last!) + reverseString(String(text.dropLast()))
+}
+reverseStringRecursive("abc")
+
