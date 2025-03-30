@@ -1573,3 +1573,29 @@ func reverseStringRecursive(_ text: String) -> String {
 }
 reverseStringRecursive("abc")
 
+
+
+func simplePermutations(_ text: String) -> [String] {
+
+    let characters = Array(text)
+    var permutations = [String]()
+
+    var queue = [[Character]]()
+
+    for char in characters {
+        var newQueue: [[Character]] = []
+        for perm in queue {
+            for i in 0...perm.count {
+                var newPerm = perm
+                newPerm.insert(char, at: i)
+                newQueue.append(newPerm)
+            }
+        }
+        queue = newQueue
+    }
+    for perm in queue {
+        permutations.append(String(perm))
+    }
+
+    return permutations
+}
