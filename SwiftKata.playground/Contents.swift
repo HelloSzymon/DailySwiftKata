@@ -1599,3 +1599,8 @@ func simplePermutations(_ text: String) -> [String] {
 
     return permutations
 }
+
+func isIsogram(_ text: String) -> Bool {
+
+    Set(text.lowercased()).count == text.lowercased().count
+}
