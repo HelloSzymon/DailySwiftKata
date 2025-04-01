@@ -1604,3 +1604,28 @@ func isIsogram(_ text: String) -> Bool {
 
     Set(text.lowercased()).count == text.lowercased().count
 }
+
+
+func multiplyMatrices2(_ matrix1: [[Int]], _ matrix2: [[Int]]) -> [[Int]]? {
+
+    let rows1 = matrix1.count
+    let cols1 = matrix1[0].count
+    let rows2 = matrix2.count
+    let cols2 = matrix2[0].count
+
+    guard matrix1[0].count == matrix2.count else {return nil}
+
+    var result = Array(repeating: Array(repeating: 0, count: cols2), count: rows1)
+
+    for i in 0..<rows1 {
+        for j in 0..<cols2 {
+            for k in 0..<cols1{
+                result[i][j] +=  matrix1[i][k] * matrix2[k][j]
+            }
+        }
+    }
+    return result
+
+
+
+}
