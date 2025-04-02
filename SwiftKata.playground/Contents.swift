@@ -1629,3 +1629,20 @@ func multiplyMatrices2(_ matrix1: [[Int]], _ matrix2: [[Int]]) -> [[Int]]? {
 
 
 }
+
+func mostFrequentLetter(_ text: String) -> Character? {
+    guard !text.isEmpty else {return nil }
+
+    var dict = [Character: Int]()
+    for char in text {
+
+        dict[char, default: 0] += 1
+    }
+
+    return dict.max{
+        $0.value < $1.value
+    }?.key
+}
+
+mostFrequentLetter("abbcccdddde")
+
