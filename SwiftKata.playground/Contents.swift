@@ -1644,5 +1644,14 @@ func mostFrequentLetter(_ text: String) -> Character? {
     }?.key
 }
 
-mostFrequentLetter("abbcccdddde")
+func sumDigitsRecursive(_ num: Int) -> Int {
+
+    if num < 10 {
+        return num
+    }
+    return (num % 10) + sumDigitsRecursive(num / 10)
+}
+
+
+sumDigitsRecursive(1234)
 
