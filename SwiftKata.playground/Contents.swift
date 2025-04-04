@@ -1655,3 +1655,19 @@ func sumDigitsRecursive(_ num: Int) -> Int {
 
 sumDigitsRecursive(1234)
 
+
+func transposeMatrix3(_ matrix: [[Int]]) -> [[Int]] {
+
+    let  row = matrix.count
+    let col = matrix[0].count
+
+    var array = Array(repeating: Array(repeating: 0, count: row), count: col)
+    for i in 1..<col {
+        for j in 1..<row {
+            array[i][j] = array[j][i]
+
+        }
+    }
+    return array
+
+}
