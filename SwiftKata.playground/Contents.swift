@@ -1664,10 +1664,20 @@ func transposeMatrix3(_ matrix: [[Int]]) -> [[Int]] {
     var array = Array(repeating: Array(repeating: 0, count: row), count: col)
     for i in 1..<col {
         for j in 1..<row {
-            array[i][j] = array[j][i]
+            array[i][j] = matrix[j][i]
 
         }
     }
     return array
 
 }
+
+func power(_ base: Int, _ exp: Int) -> Int {
+    if exp == 0 {
+        return 1
+    }
+
+    return base * power(base, exp - 1)
+
+}
+
