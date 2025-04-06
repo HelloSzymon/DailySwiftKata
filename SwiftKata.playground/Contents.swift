@@ -1680,4 +1680,33 @@ func power(_ base: Int, _ exp: Int) -> Int {
     return base * power(base, exp - 1)
 
 }
+enum AppError: Error {
+    case decodingError(String)
+    case networkError(String)
+}
+func error() -> Result<String, Error> {
+    if Bool.random() {
+        return .success("well done")
+    } else {
+        return .failure(AppError.networkError("Network"))
+    }
+}
 
+func hasDuplicate(_ array: [Int]) -> Bool {
+
+    array.count == Set(array).count
+}
+
+func hasDuplicateOpt(_ array: [Int]) -> Bool {
+    var seen = Set<Int>()
+
+    for i in array {
+        if seen.contains(i) {
+            return true
+        } else {
+            seen.insert(i)
+        }
+    }
+
+    return false
+}
