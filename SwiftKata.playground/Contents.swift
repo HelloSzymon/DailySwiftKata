@@ -1710,3 +1710,21 @@ func hasDuplicateOpt(_ array: [Int]) -> Bool {
 
     return false
 }
+func fibonacci2(_ n: Int) -> [Int] {
+
+    guard n > 0 else { return [] }
+      if n == 1 { return [0] }
+      if n == 2 { return [0, 1] }
+
+      var result = [0, 1]
+
+    for _ in 2..<n {
+
+        let next = result[result.count - 1] + result[result.count - 2]
+        result.append(next)
+
+    }
+
+    return result
+
+}
