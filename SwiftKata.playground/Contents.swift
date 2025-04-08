@@ -1728,3 +1728,24 @@ func fibonacci2(_ n: Int) -> [Int] {
     return result
 
 }
+//abc = a, b, c, ab, ac, bc, abc
+func generateSimplePermutations2(_ text: String) -> [String] {
+
+    var permutations = [String]()
+
+    for letter in text {
+
+   var newPermutations = [String]()
+        for permutation in newPermutations {
+            for i in 0...permutation.count {
+                var new = permutation
+                let index = permutation.index(permutation.startIndex, offsetBy: i)
+                new.insert(letter, at: index)
+                newPermutations.append(new)
+            }
+        }
+        permutations = newPermutations
+    }
+
+    return permutations
+}
