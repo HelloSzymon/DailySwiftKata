@@ -1749,3 +1749,27 @@ func generateSimplePermutations2(_ text: String) -> [String] {
 
     return permutations
 }
+
+
+func isValidEmail(_ email: String) -> Bool {
+
+    if email.contains("@") {
+        let separated = email.split(separator: "@")
+        let secondPart = separated[1]
+        if secondPart.contains(".") {
+            return true
+        }
+    }
+    return false
+}
+isValidEmail("kkjndspl.pl")
+
+func isValidEmail2(_ email: String) -> Bool {
+    let parts = email.split(separator: "@")
+
+    guard parts.count == 2 else { return false }
+    let domain = parts[1]
+
+    return domain.contains(".")
+}
+isValidEmail2("kkjndspl.pl")
