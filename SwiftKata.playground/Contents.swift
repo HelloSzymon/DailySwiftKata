@@ -1773,3 +1773,9 @@ func isValidEmail2(_ email: String) -> Bool {
     return domain.contains(".")
 }
 isValidEmail2("kkjndspl.pl")
+
+
+func areAnagrams3(_ first: String, _ second: String) -> Bool{
+
+    first.sorted() == second.sorted()
+}
