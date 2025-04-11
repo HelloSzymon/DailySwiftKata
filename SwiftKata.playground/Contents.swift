@@ -1779,3 +1779,10 @@ func areAnagrams3(_ first: String, _ second: String) -> Bool{
 
     first.sorted() == second.sorted()
 }
+
+func wordCount3(_ sentence: String) -> Int {
+
+    sentence.filter{$0.isLetter || $0.isWhitespace}.split(separator: " ").count
+
+}
+wordCount3("asnkdka nskljnas, nsadk")
