@@ -1786,3 +1786,21 @@ func wordCount3(_ sentence: String) -> Int {
 
 }
 wordCount3("asnkdka nskljnas, nsadk")
+
+func pairCharacters(_ text: String) -> [String] {
+    var result = [String]()
+    let chars = Array(text)
+    var i = 0
+
+    while i < chars.count {
+        if i + 1 < chars.count {
+            result.append("\(chars[i])\(chars[i + 1])")
+        } else {
+            result.append("\(chars[i])_")
+        }
+        i + 2
+    }
+
+    return result
+}
+//["ab", "cd", "e_"]
