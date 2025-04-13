@@ -1804,3 +1804,21 @@ func pairCharacters(_ text: String) -> [String] {
     return result
 }
 //["ab", "cd", "e_"]
+
+func smallestMissingPositive(_ nums: [Int]) -> Int {
+
+
+    let set = Set(nums)
+
+    var i = 1
+
+    while true {
+        if !set.contains(i){
+            return i
+        }
+        i + 1 
+    }
+
+
+}
+smallestMissingPositive([3, 4, -1, 1])
