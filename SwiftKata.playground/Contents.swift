@@ -1850,4 +1850,10 @@ func fizzBuzz(_ n: Int) -> [String] {
 
     return result
 }
-fizzBuzz(15)
+
+func isPalindrome4(_ text: String) -> Bool {
+
+    let cleanText = text.lowercased().filter{$0.isLetter}
+     return cleanText == String(cleanText.reversed())
+}
+
