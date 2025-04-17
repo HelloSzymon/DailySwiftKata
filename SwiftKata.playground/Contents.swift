@@ -1857,3 +1857,13 @@ func isPalindrome4(_ text: String) -> Bool {
      return cleanText == String(cleanText.reversed())
 }
 
+
+func countCharacters2(_ text: String) -> [Character: Int] {
+
+    var result: [Character: Int] = [:]
+    for character in text {
+        result[character, default: 0] += 1
+
+    }
+    return result
+}
