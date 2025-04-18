@@ -1867,3 +1867,19 @@ func countCharacters2(_ text: String) -> [Character: Int] {
     }
     return result
 }
+func countUniques(_ array: [Int]) -> Int {
+     var result = [Int]()
+    var countUniqe: [Int: Int] = [:]
+    for number in array {
+        countUniqe[number, default: 0] += 1
+    }
+
+    for i in countUniqe.values {
+        if i == 1 {
+            result.append(i)
+        }
+    }
+
+    return result.count
+}
+countUniques([1, 2, 2, 3, 4, 4])
