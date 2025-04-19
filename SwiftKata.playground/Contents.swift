@@ -1883,3 +1883,11 @@ func countUniques(_ array: [Int]) -> Int {
     return result.count
 }
 countUniques([1, 2, 2, 3, 4, 4])
+
+
+func reverseWords6(_ sentence: String) -> String {
+    String(sentence.split(separator: " ", omittingEmptySubsequences: true).reversed().joined(separator: " ").reversed())
+
+
+}
+reverseWords6("Szymon lubi piwo")//"tfiwS si nuf"
