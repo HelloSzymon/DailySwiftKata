@@ -1890,4 +1890,19 @@ func reverseWords6(_ sentence: String) -> String {
 
 
 }
-reverseWords6("Szymon lubi piwo")//"tfiwS si nuf"
+
+
+func hasSumPair(_ array: [Int], target: Int) -> Bool {
+
+    for i in 0..<array.count {
+        for j in i+1..<array.count {
+            if array[i] + array[j] == target {
+                return true
+            }
+        }
+    }
+    return false
+
+}
+hasSumPair([1, 3, 5, 7], target: 10) /*→ true // 3 + 7*/
+
