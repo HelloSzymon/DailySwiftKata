@@ -1904,5 +1904,22 @@ func hasSumPair(_ array: [Int], target: Int) -> Bool {
     return false
 
 }
-hasSumPair([1, 3, 5, 7], target: 10) /*→ true // 3 + 7*/
 
+func sortEvenOdd(_ array: [Int]) -> [Int] {
+    var resultEven = [Int]()
+    var resultOdd = [Int]()
+
+    for i in array {
+        if i % 2  == 0{
+            resultEven.append(i)
+        } else {
+            resultOdd.append(i)
+        }
+    }
+    resultEven = resultEven.sorted()
+     resultOdd = resultOdd.sorted(by: >)
+  resultEven.append(contentsOf: resultOdd)
+    return resultEven
+}
+
+sortEvenOdd([5, 3, 2, 8, 1]) /*→ [2, 8, 5, 3, 1]*/
