@@ -1923,3 +1923,22 @@ func sortEvenOdd(_ array: [Int]) -> [Int] {
 }
 
 sortEvenOdd([5, 3, 2, 8, 1]) /*→ [2, 8, 5, 3, 1]*/
+
+
+func longestCommonPrefix3(_ words: [String]) -> String {
+
+    guard let first = words.first else {return ""}
+    var prefix = ""
+
+    for (i, char) in first.enumerated() {
+        for word in words {
+            if i >= word.count || word[word.index(word.startIndex, offsetBy: i)] != char {
+                return prefix
+            }
+        }
+        prefix.append(char)
+    }
+    return prefix
+}
+
+longestCommonPrefix3(["flower", "flow", "flight"]) /*→ "fl"*/
