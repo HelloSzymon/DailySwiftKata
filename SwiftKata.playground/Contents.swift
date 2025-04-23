@@ -1941,4 +1941,22 @@ func longestCommonPrefix3(_ words: [String]) -> String {
     return prefix
 }
 
-longestCommonPrefix3(["flower", "flow", "flight"]) /*→ "fl"*/
+
+
+func reverseLetters(_ text: String) -> String {
+    var letters = Array(text.filter { $0.isLetter }.reversed())
+    var result = ""
+
+    for char in text {
+        if char.isLetter {
+            result.append(letters.removeFirst())
+        } else {
+            result.append(char)
+        }
+    }
+
+    return result
+}
+// "a,b$c" → "c,b$a"
+// Odwróć tylko litery, zostaw znaki specjalne na miejscu.
+reverseLetters("a,b$c")
