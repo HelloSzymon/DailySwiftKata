@@ -1959,4 +1959,13 @@ func reverseLetters(_ text: String) -> String {
 }
 // "a,b$c" → "c,b$a"
 // Odwróć tylko litery, zostaw znaki specjalne na miejscu.
-reverseLetters("a,b$c")
+
+
+func isCleanPalindrome(_ text: String) -> Bool {
+    var cleanText = text.lowercased().split(separator: " ").joined()
+    return cleanText == String(cleanText.reversed())
+
+}
+
+isCleanPalindrome("A man a plan a canal Panama")
+// "A man a plan a canal Panama" → true
