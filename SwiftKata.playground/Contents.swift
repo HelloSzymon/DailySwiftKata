@@ -1969,3 +1969,17 @@ func isCleanPalindrome(_ text: String) -> Bool {
 
 isCleanPalindrome("A man a plan a canal Panama")
 // "A man a plan a canal Panama" → true
+
+
+func mostFrequent(_ array: [Int]) -> Int? {
+
+    guard !array.isEmpty else { return nil }
+
+    var resultDict = [Int:Int]()
+    for number in array {
+        resultDict[number, default: 0] += 1
+    }
+
+    return resultDict.max(by: {$0.value < $1.value})?.key
+}
+mostFrequent([1, 2, 3, 4, 1])
