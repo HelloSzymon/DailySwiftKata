@@ -1983,3 +1983,11 @@ func mostFrequent(_ array: [Int]) -> Int? {
     return resultDict.max(by: {$0.value < $1.value})?.key
 }
 mostFrequent([1, 2, 3, 4, 1])
+
+func containsCaseInsensitive(_ base: String, _ search: String) -> Bool {
+
+
+     base.lowercased().contains(search.lowercased())
+
+}
+containsCaseInsensitive("abcdefszymonsjks", "szymon")
