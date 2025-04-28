@@ -1990,4 +1990,14 @@ func containsCaseInsensitive(_ base: String, _ search: String) -> Bool {
      base.lowercased().contains(search.lowercased())
 
 }
-containsCaseInsensitive("abcdefszymonsjks", "szymon")
+
+
+func formatNumber(_ num: Int) -> String {
+    var numberFormatter = NumberFormatter()
+    numberFormatter.numberStyle = .decimal
+
+
+    return numberFormatter.string(from: NSNumber(value: num)) ?? ""
+
+}
+
