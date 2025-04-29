@@ -2001,3 +2001,9 @@ func formatNumber(_ num: Int) -> String {
 
 }
 
+func isIsogram3(_ word: String) -> Bool {
+
+    word.lowercased().count == Set(word.lowercased()).count
+}
+
+isIsogram3("abcde")
