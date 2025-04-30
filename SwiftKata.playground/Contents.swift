@@ -2006,4 +2006,11 @@ func isIsogram3(_ word: String) -> Bool {
     word.lowercased().count == Set(word.lowercased()).count
 }
 
-isIsogram3("abcde")
+func isFullSequence(_ array: [Int]) -> Bool {
+
+    let n = array.count
+    let expectedSet = Set(1...n)
+    return expectedSet == Set(array)
+
+}
+
