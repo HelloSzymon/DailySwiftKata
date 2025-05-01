@@ -2014,3 +2014,18 @@ func isFullSequence(_ array: [Int]) -> Bool {
 
 }
 
+func groupAnagrams(_ words: [String]) -> [[String]] {
+
+    var groups = [String: [String]]()
+
+    for word in words {
+        let sorted = String(word.sorted())
+        groups[sorted, default: []].append(word)
+    }
+
+    return Array(groups.values)
+
+}
+groupAnagrams(["bat", "tab", "cat", "tac", "act"])
+//→ [["bat", "tab"], ["cat", "tac", "act"]]
+
