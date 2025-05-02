@@ -2027,5 +2027,10 @@ func groupAnagrams(_ words: [String]) -> [[String]] {
 
 }
 groupAnagrams(["bat", "tab", "cat", "tac", "act"])
-//→ [["bat", "tab"], ["cat", "tac", "act"]]
 
+
+func intersection(_ a: [Int], _ b: [Int]) -> [Int] {
+
+ Array(Set(a.filter{b.contains($0)}))
+}
+intersection([1,2,2,1], [2,2])
