@@ -2034,3 +2034,9 @@ func intersection(_ a: [Int], _ b: [Int]) -> [Int] {
  Array(Set(a.filter{b.contains($0)}))
 }
 intersection([1,2,2,1], [2,2])
+
+func isNumericPalindrome3(_ number: Int) -> Bool {
+
+    String(number) == String(String(number).reversed())
+}
+isNumericPalindrome3(123)
