@@ -2039,4 +2039,15 @@ func isNumericPalindrome3(_ number: Int) -> Bool {
 
     String(number) == String(String(number).reversed())
 }
-isNumericPalindrome3(123)
+
+
+func letterFrequency(_ text: String) -> [Character: Int] {
+    let formatter = text.lowercased().filter{$0.isLetter}
+    var result = [Character: Int]()
+
+    for char in formatter {
+        result[char, default: 0] += 1
+    }
+    return result
+}
+letterFrequency("AA bb cc")
