@@ -2050,4 +2050,10 @@ func letterFrequency(_ text: String) -> [Character: Int] {
     }
     return result
 }
-letterFrequency("AA bb cc")
+func titleCase(_ title: String) -> String {
+
+    title.split(separator: " ").map{$0.lowercased().capitalized}.joined(separator: " ")
+
+}
+titleCase("hElLo wOrLD")
+
