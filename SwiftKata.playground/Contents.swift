@@ -2055,5 +2055,20 @@ func titleCase(_ title: String) -> String {
     title.split(separator: " ").map{$0.lowercased().capitalized}.joined(separator: " ")
 
 }
-titleCase("hElLo wOrLD")
 
+func findUnique(_ array: [Int]) -> Int? {
+
+    var dic = [Int : Int]()
+    var result = 0
+
+    for number in array {
+        dic[number, default: 0] += 1
+    }
+    for (key, value) in dic {
+        if value == 1 {
+            return key
+        }
+    }
+  return nil
+}
+findUnique([4, 1, 2, 1, 2])
