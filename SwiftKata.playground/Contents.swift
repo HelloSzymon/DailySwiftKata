@@ -2071,4 +2071,18 @@ func findUnique(_ array: [Int]) -> Int? {
     }
   return nil
 }
-findUnique([4, 1, 2, 1, 2])
+
+func isConsecutive(_ array: [Int]) -> Bool {
+
+    guard array.count > 1 else {return true}
+
+    var sortedArray = array.sorted()
+
+    for i in 0..<sortedArray.count - 1 {
+        if sortedArray[i] + 1 != sortedArray[i + 1] {
+            return false
+        }
+    }
+
+    return true
+}
