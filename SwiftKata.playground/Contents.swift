@@ -2086,3 +2086,15 @@ func isConsecutive(_ array: [Int]) -> Bool {
 
     return true
 }
+
+func evenOddSums(_ array: [Int]) -> (even: Int, odd: Int) {
+    let odd = array.filter{$0 % 2 != 0}.reduce(0, +)
+    let even = array.filter{$0 % 2 == 0}.reduce(0, +)
+
+    return (even: even, odd: odd)
+
+
+
+}
+evenOddSums([1, 2, 3, 4] )
+
