@@ -2096,5 +2096,9 @@ func evenOddSums(_ array: [Int]) -> (even: Int, odd: Int) {
 
 
 }
-evenOddSums([1, 2, 3, 4] )
+func containsDuplicates(_ array: [Int]) -> Bool {
+    Set(array).count != array.count
+
+}
+containsDuplicates([1,2,3])
 
