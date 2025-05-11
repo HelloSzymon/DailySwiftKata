@@ -2100,5 +2100,19 @@ func containsDuplicates(_ array: [Int]) -> Bool {
     Set(array).count != array.count
 
 }
-containsDuplicates([1,2,3])
+func removeDuplicatesPreservingOrder(_ array: [Int]) -> [Int] {
+     var seen = Set<Int>()
+    var result = [Int]()
+
+    for i in array {
+        if !seen.contains(i) {
+            seen.insert(i)
+            result.append(i)
+        }
+
+    }
+    return result
+}
+
+removeDuplicatesPreservingOrder([1,2,3,4, 1])
 
