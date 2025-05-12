@@ -2114,5 +2114,17 @@ func removeDuplicatesPreservingOrder(_ array: [Int]) -> [Int] {
     return result
 }
 
-removeDuplicatesPreservingOrder([1,2,3,4, 1])
 
+func firstCommonElement(_ a: [Int], _ b: [Int]) -> Int? {
+    var isCommon = Set<Int>()
+
+
+
+    for element in b{
+        if isCommon.contains(element) {
+            return element
+        }
+    }
+    return nil
+}
+ firstCommonElement( [1,2,3], [4,5,2])
