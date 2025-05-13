@@ -2127,4 +2127,16 @@ func firstCommonElement(_ a: [Int], _ b: [Int]) -> Int? {
     }
     return nil
 }
- firstCommonElement( [1,2,3], [4,5,2])
+func isPowerOfTwo3(_ number: Int) -> Bool {
+    var number  = number
+    guard number > 0 else {return false}
+    while number > 1 {
+        if number % 2 != 0 {
+            return false
+        } else {
+            number /= 2
+        }
+    }
+
+    return true
+}
