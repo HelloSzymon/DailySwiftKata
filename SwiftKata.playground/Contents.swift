@@ -2140,3 +2140,14 @@ func isPowerOfTwo3(_ number: Int) -> Bool {
 
     return true
 }
+
+func rotateLeft(_ array: [Int], by n: Int) -> [Int] {
+
+    guard !array.isEmpty else {return []}
+    let shift  = n % array.count
+
+    return Array(array.dropFirst(shift) + array.dropLast(shift))
+}
+
+
+
