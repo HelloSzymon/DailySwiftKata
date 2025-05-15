@@ -2151,3 +2151,14 @@ func rotateLeft(_ array: [Int], by n: Int) -> [Int] {
 
 
 
+func wordsContaining(_ words: [String], letter: Character) -> [String] {
+
+    var result = [String]()
+    for word in words {
+        if word.contains(letter) {
+            result.append(word)
+        }
+    }
+
+    return result
+}
