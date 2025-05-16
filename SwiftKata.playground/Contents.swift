@@ -2162,3 +2162,10 @@ func wordsContaining(_ words: [String], letter: Character) -> [String] {
 
     return result
 }
+
+func areAnagrams4(_ a: String, _ b: String) -> Bool {
+
+    a.sorted() == b.sorted()
+
+
+}
