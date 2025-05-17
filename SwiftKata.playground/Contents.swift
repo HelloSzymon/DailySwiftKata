@@ -2169,3 +2169,11 @@ func areAnagrams4(_ a: String, _ b: String) -> Bool {
 
 
 }
+
+func countDigits(_ number: Int) -> Int {
+    
+    String(abs(number)).count
+
+
+}
+countDigits(12345)
