@@ -2177,3 +2177,9 @@ func countDigits(_ number: Int) -> Int {
 
 }
 countDigits(12345)
+
+func reverseWords7(_ sentence: String) -> String{
+    sentence.split(separator: " ").reversed().joined(separator: " ")
+
+}
+reverseWords7("Hello World from Swift")
