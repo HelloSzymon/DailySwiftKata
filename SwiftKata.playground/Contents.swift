@@ -2182,4 +2182,11 @@ func reverseWords7(_ sentence: String) -> String{
     sentence.split(separator: " ").reversed().joined(separator: " ")
 
 }
-reverseWords7("Hello World from Swift")
+
+func sumLargest(_ array: [Int], count: Int) -> Int {
+    var arr = array
+    var sorted = arr.sorted(by: >)
+    return sorted.prefix(count).reduce(0, +)
+
+}
+sumLargest([1, 5, 2, 9], count: 2)
