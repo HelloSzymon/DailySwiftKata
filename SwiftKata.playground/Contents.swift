@@ -2190,3 +2190,17 @@ func sumLargest(_ array: [Int], count: Int) -> Int {
 
 }
 sumLargest([1, 5, 2, 9], count: 2)
+
+func isPythagoreanTriple(_ a: Int, _ b: Int, _ c: Int) -> Bool {
+    var arr = [Int]()
+    arr.append(contentsOf: [a, b , c])
+    let arrSorted = arr.sorted()
+
+    if squareDigits(arrSorted[0]) + squareDigits(arrSorted[1]) == squareDigits(arrSorted[2]) {
+        return true
+    }
+
+    return false
+
+}
+isPythagoreanTriple(3, 4, 5)
