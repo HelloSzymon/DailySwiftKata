@@ -2203,4 +2203,15 @@ func isPythagoreanTriple(_ a: Int, _ b: Int, _ c: Int) -> Bool {
     return false
 
 }
-isPythagoreanTriple(3, 4, 5)
+func mostFrequentCharacter(_ text: String) -> Character? {
+    let cleaned = text.lowercased().filter { !$0.isWhitespace }
+    var result = [Character:Int]()
+    var arr = text.split(separator: "")
+
+    for i in cleaned {
+        result[i, default: 0 ] += 1
+    }
+    return result.max(by: {$0.value < $1.value})?.key
+
+}
+mostFrequentCharacter("aabbbcccc")
