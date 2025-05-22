@@ -2215,3 +2215,11 @@ func mostFrequentCharacter(_ text: String) -> Character? {
 
 }
 mostFrequentCharacter("aabbbcccc")
+
+func hasUniqueDigits(_ number: Int) -> Bool {
+
+    let digits = String(number)
+    return Set(digits).count == digits.count
+
+}
+hasUniqueDigits(1223)
