@@ -2223,3 +2223,9 @@ func hasUniqueDigits(_ number: Int) -> Bool {
 
 }
 hasUniqueDigits(1223)
+
+func isPalindrome5(_ text: String) -> Bool {
+    var cleanText = text.lowercased().filter{!$0.isWhitespace}
+    return cleanText == String(cleanText.reversed())
+
+}
