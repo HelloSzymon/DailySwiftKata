@@ -2229,3 +2229,12 @@ func isPalindrome5(_ text: String) -> Bool {
     return cleanText == String(cleanText.reversed())
 
 }
+
+func secondLargest3(_ numbers: [Int]) -> Int? {
+
+    let unique = Array(Set(numbers)).sorted(by: >)
+
+    return unique.count > 2 ? unique[1] : nil
+
+}
+secondLargest3([1,2, 5, 6, 10])
