@@ -2238,3 +2238,15 @@ func secondLargest3(_ numbers: [Int]) -> Int? {
 
 }
 secondLargest3([1,2, 5, 6, 10])
+func prefixSums(_ numbers: [Int]) -> [Int] {
+    var currentSum = Int()
+    var result = [Int]()
+    for i in numbers {
+        currentSum += i
+        result.append(currentSum)
+    }
+
+    return result
+}
+prefixSums([1, 2, 3])
+//[1, 2, 3] → [1, 3, 6]
