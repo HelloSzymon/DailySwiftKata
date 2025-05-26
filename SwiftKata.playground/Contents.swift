@@ -2250,3 +2250,9 @@ func prefixSums(_ numbers: [Int]) -> [Int] {
 }
 prefixSums([1, 2, 3])
 //[1, 2, 3] → [1, 3, 6]
+
+func hasDuplicates<T: Hashable>(_ array: [T]) -> Bool {
+
+    Set(array).count != array.count
+
+}
