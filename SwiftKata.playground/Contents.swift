@@ -2256,3 +2256,25 @@ func hasDuplicates<T: Hashable>(_ array: [T]) -> Bool {
     Set(array).count != array.count
 
 }
+func interleave(_ a: String, _ b: String) -> String {
+    guard !a.isEmpty else {return ""}
+    guard !b.isEmpty else {return ""}
+    let aArr = Array(a)
+    let bArr = Array(b)
+    var result = String()
+    let maxLength = max(aArr.count, bArr.count)
+
+    for i in 0..<maxLength {
+        if i < aArr.count {
+            result.append(aArr[i])
+        }
+        if i < bArr.count {
+            result.append(bArr[i])
+        }
+
+    }
+
+    return result
+}
+
+interleave("abc", "123")
