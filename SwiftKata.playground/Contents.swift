@@ -2277,4 +2277,16 @@ func interleave(_ a: String, _ b: String) -> String {
     return result
 }
 
+func groupAnagrams2(_ words: [String]) -> [[String]] {
+    var anagramGroups = [String: [String]]()
+
+
+    for word in words {
+        let sorted  = String(word.sorted())
+        anagramGroups[sorted, default: []].append(word)
+    }
+    return Array(anagramGroups.values)
+}
+
+
 interleave("abc", "123")
