@@ -2288,5 +2288,14 @@ func groupAnagrams2(_ words: [String]) -> [[String]] {
     return Array(anagramGroups.values)
 }
 
+func characterFrequencies(_ text: String) -> [Character: Int] {
+    var result = [Character : Int]()
+    for char in text {
+        result[char, default: 0] += 1
+    }
 
-interleave("abc", "123")
+    return result
+}
+
+
+characterFrequencies("Szymooon")
