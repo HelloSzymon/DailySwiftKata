@@ -2296,6 +2296,21 @@ func characterFrequencies(_ text: String) -> [Character: Int] {
 
     return result
 }
+//[1, 2, 3] → [1, 3, 6]
+func prefixSums2(_ numbers: [Int]) -> [Int] {
+
+    var currentSum = Int()
+    var result = [Int]()
+
+    for i in numbers {
+        currentSum += i
+        result.append(currentSum)
+
+    }
+
+    return result
+}
+prefixSums2([1 , 2, 3])
 
 
-characterFrequencies("Szymooon")
+
