@@ -2310,7 +2310,16 @@ func prefixSums2(_ numbers: [Int]) -> [Int] {
 
     return result
 }
-prefixSums2([1 , 2, 3])
+func swapPairs(_ text: String) -> String {
+
+    var chars = Array(text)
+
+    for i in stride(from: 0, to: chars.count - 1, by: 2) {
+        chars.swapAt(i, i + 1)
+    }
+    return String(chars)
+}
+//"abcd" → "badc"
 
 
 
