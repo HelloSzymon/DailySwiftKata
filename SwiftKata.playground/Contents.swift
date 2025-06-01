@@ -2320,6 +2320,21 @@ func swapPairs(_ text: String) -> String {
     return String(chars)
 }
 //"abcd" → "badc"
+func splitEvenOdd(_ array: [Int]) -> ([Int], [Int]) {
+    var parzyste = [Int]()
+    var niePrzyste = [Int]()
+
+    for i in array {
+        if i % 2 == 0 {
+            parzyste.append(i)
+        } else {
+            niePrzyste.append(i)
+        }
+    }
+    return (parzyste, niePrzyste)
+
+
+}
 
 
 
