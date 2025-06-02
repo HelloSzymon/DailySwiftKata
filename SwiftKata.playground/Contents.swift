@@ -2337,4 +2337,12 @@ func splitEvenOdd(_ array: [Int]) -> ([Int], [Int]) {
 }
 
 
+func average(_ numbers: [Int]) -> Double? {
+    guard !numbers.isEmpty else {return nil}
+    var count = numbers.count
+    var sum = numbers.reduce(0, +)
+
+    return Double(sum) / Double(count)
+
+}
 
