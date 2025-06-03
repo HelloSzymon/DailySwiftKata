@@ -2346,3 +2346,10 @@ func average(_ numbers: [Int]) -> Double? {
 
 }
 
+func shortestAndLongest(_ words: [String]) -> (shortest: String, longest: String)? {
+
+    guard !words.isEmpty else {return nil}
+    let shortest = words.min(by: { $0.count < $1.count })!
+      let longest = words.max(by: { $0.count < $1.count })!
+    return (shortest, longest)
+}
