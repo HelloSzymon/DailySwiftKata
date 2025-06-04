@@ -2353,3 +2353,15 @@ func shortestAndLongest(_ words: [String]) -> (shortest: String, longest: String
       let longest = words.max(by: { $0.count < $1.count })!
     return (shortest, longest)
 }
+
+func uniqueCharacters2(_ text: String) -> [Character] {
+    var dict = [Character: Int]()
+    for char in text {
+        dict[char, default: 0] += 1
+    }
+
+    var result = dict.filter{$0.value == 1}.map{$0.key}
+    return result
+}
+
+uniqueCharacters2("Swiss")
