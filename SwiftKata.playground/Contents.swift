@@ -1,5 +1,6 @@
 import UIKit
-
+import XCTest
+import Foundation
 
 
 func repeatEachCharacter(_ str: String) -> String {
@@ -2363,5 +2364,24 @@ func uniqueCharacters2(_ text: String) -> [Character] {
     var result = dict.filter{$0.value == 1}.map{$0.key}
     return result
 }
+func uniqueWord(_ text: String) -> [String] {
+    var dict = [String: Int]()
+    let words = text.components(separatedBy: .whitespacesAndNewlines)
 
-uniqueCharacters2("Swiss")
+    for word in words {
+        dict[word, default: 0] += 1
+    }
+    var result = dict.filter{$0.value == 1}.map{$0.key}
+
+    return result
+}
+
+func countVowels3(_ text: String) -> Int {
+    var array = Array(text)
+    var count = 0
+    let vovels: [Character] = ["a", "e", "i", "o", "u"]
+        return array.filter{vovels.contains($0)}.count
+
+}
+
+
