@@ -2384,4 +2384,21 @@ func countVowels3(_ text: String) -> Int {
 
 }
 
+func removeDuplicates<T: Hashable>(_ array: [T]) -> [T] {
+    // ...
+
+    var result: [T] = []
+    var seen: Set<T> = []
+    for i in array {
+        if !seen.contains(i) {
+            seen.insert(i)
+            result.append(i)
+        }
+    }
+
+
+
+    return result
+}
+
 
