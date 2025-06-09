@@ -2402,3 +2402,18 @@ func removeDuplicates<T: Hashable>(_ array: [T]) -> [T] {
 }
 
 
+
+// Odwróć kolejność cyfr w liczbie, np. 1234 → 4321
+func reverseDigits(_ number: Int) -> Int {
+    var result = Int()
+    var number = abs(number)
+
+    while number != 0 {
+        result = result * 10 + number % 10
+        number /= 10
+
+    }
+    return result
+
+}
+
