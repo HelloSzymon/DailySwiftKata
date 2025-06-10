@@ -2417,3 +2417,14 @@ func reverseDigits(_ number: Int) -> Int {
 
 }
 
+// Policz ile razy występuje każde słowo w zdaniu.
+func wordFrequencies(_ text: String) -> [String: Int] {
+    var arr = text.lowercased().split(separator: " ")
+    var result = [String:Int]()
+
+    for word in arr {
+        result[String(word), default: 0] += 1
+
+    }
+    return result
+}
