@@ -2417,7 +2417,6 @@ func reverseDigits(_ number: Int) -> Int {
 
 }
 
-// Policz ile razy występuje każde słowo w zdaniu.
 func wordFrequencies(_ text: String) -> [String: Int] {
     var arr = text.lowercased().split(separator: " ")
     var result = [String:Int]()
@@ -2426,5 +2425,28 @@ func wordFrequencies(_ text: String) -> [String: Int] {
         result[String(word), default: 0] += 1
 
     }
+    return result
+}
+// Zwróć tablicę liczb od 1 do n, ale:
+// jeśli liczba podzielna przez 3 → "Fizz"
+// jeśli przez 5 → "Buzz"
+// jeśli przez 3 i 5 → "FizzBuzz"
+
+
+func fizzBuzz2(_ n: Int) -> [String] {
+    var result = [String]()
+
+    for i in 1...n {
+        if i % 3 == 0 && i % 5 == 0 {
+            result.append("FizzBuzz")
+        }  else if i % 3 == 0 {
+            result.append("Fizz")
+        }  else if i % 5 == 0 {
+            result.append("Buzz")
+        } else {
+            result.append("\(i)")
+        }
+    }
+
     return result
 }
