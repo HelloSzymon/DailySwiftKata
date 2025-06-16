@@ -2427,11 +2427,6 @@ func wordFrequencies(_ text: String) -> [String: Int] {
     }
     return result
 }
-// Zwróć tablicę liczb od 1 do n, ale:
-// jeśli liczba podzielna przez 3 → "Fizz"
-// jeśli przez 5 → "Buzz"
-// jeśli przez 3 i 5 → "FizzBuzz"
-
 
 func fizzBuzz2(_ n: Int) -> [String] {
     var result = [String]()
@@ -2449,4 +2444,10 @@ func fizzBuzz2(_ n: Int) -> [String] {
     }
 
     return result
+}
+
+// Zwróć elementy, które są w pierwszej tablicy, ale nie w drugiej.
+func difference<T: Hashable>(_ a: [T], _ b: [T]) -> [T] {
+    a.filter{!b.contains($0)}
+
 }
