@@ -2456,3 +2456,9 @@ func difference<T: Hashable>(_ a: [T], _ b: [T]) -> [T] {
 func difference(a: String, b: String) -> String {
     a.filter{!b.contains($0)}
 }
+func haveCommonCharacter(_ a: String, _ b: String) -> Bool {
+
+    Set(a).isDisjoint(with: Set(b))
+
+}
+haveCommonCharacter("abc", "baq")
