@@ -2461,4 +2461,10 @@ func haveCommonCharacter(_ a: String, _ b: String) -> Bool {
     Set(a).isDisjoint(with: Set(b))
 
 }
-haveCommonCharacter("abc", "baq")
+func sumOfNumbers(in text: String) -> Int {
+    text.components(separatedBy: CharacterSet.decimalDigits.inverted).filter{!$0.isEmpty}.map{Int($0) ?? 0}.reduce(0, +)
+
+
+
+}
+
