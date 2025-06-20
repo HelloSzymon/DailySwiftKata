@@ -2468,3 +2468,13 @@ func sumOfNumbers(in text: String) -> Int {
 
 }
 
+func characterHistogram(_ text: String) -> [Character: Int] {
+    var dict = [Character: Int]()
+
+    for i in text {
+        dict[i, default: 0] += 1
+    }
+    return dict
+
+}
+characterHistogram("abbbaaacccq")
