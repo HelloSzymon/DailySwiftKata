@@ -2478,3 +2478,10 @@ func characterHistogram(_ text: String) -> [Character: Int] {
 
 }
 characterHistogram("abbbaaacccq")
+
+func isIsogram2(_ word: String) -> Bool {
+
+    word.count == Set(word).count
+}
+
+isIsogram2("swift")
