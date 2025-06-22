@@ -2485,3 +2485,18 @@ func isIsogram2(_ word: String) -> Bool {
 }
 
 isIsogram2("swift")
+
+func groupByEvenOdd(_ numbers: [Int]) -> (even: [Int], odd: [Int]) {
+    var even = [Int]()
+    var odd = [Int]()
+
+    for i in numbers {
+        if i % 2 == 0 {
+            even.append(i)
+        } else {
+            odd.append(i)
+        }
+    }
+
+    return (even, odd)
+}
