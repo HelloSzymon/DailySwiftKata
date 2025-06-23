@@ -2500,3 +2500,18 @@ func groupByEvenOdd(_ numbers: [Int]) -> (even: [Int], odd: [Int]) {
 
     return (even, odd)
 }
+func uniqueWords(_ text: String) -> [String] {
+
+    let words = text.split(separator: " ").map{String($0)}
+    var wordCount: [String: Int] = [:]
+
+    for word in words {
+        wordCount[word, default: 0] += 1
+    }
+
+
+
+    return wordCount.filter{$0.value == 1}.map{$0.key}
+}
+uniqueWords("Paweł był wczoraj na Paweł")
+
