@@ -2515,3 +2515,14 @@ func uniqueWords(_ text: String) -> [String] {
 }
 uniqueWords("Paweł był wczoraj na Paweł")
 
+
+func uniqueWords2( _ text: String) -> [String] {
+    let words = text.split(separator: " ").map{String($0)}
+    var dict = [String: Int]()
+
+    for word in words {
+        dict[word, default: 0] += 1
+    }
+
+    return dict.filter{$0.value == 1}.map{$0.key}
+}
