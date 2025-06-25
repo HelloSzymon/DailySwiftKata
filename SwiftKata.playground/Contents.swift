@@ -2526,3 +2526,16 @@ func uniqueWords2( _ text: String) -> [String] {
 
     return dict.filter{$0.value == 1}.map{$0.key}
 }
+
+
+func aboveAverage(_ numbers: [Int]) -> [Int] {
+    let average = Double(numbers.reduce(0, +)) / Double(numbers.count)
+    var result = [Int]()
+    for number in numbers {
+        if Double(number) > average {
+            result.append(number)
+        }
+    }
+
+    return result
+}
