@@ -2539,3 +2539,17 @@ func aboveAverage(_ numbers: [Int]) -> [Int] {
 
     return result
 }
+
+
+func hasDoubleLetter(_ word: String) -> Bool {
+
+    let char = Array(word)
+
+    for (a,b) in zip(char, char.dropFirst()) {
+        if a == b {
+            return true
+        }
+    }
+
+    return false
+}
