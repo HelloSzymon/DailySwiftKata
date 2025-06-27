@@ -2553,3 +2553,16 @@ func hasDoubleLetter(_ word: String) -> Bool {
 
     return false
 }
+func remove(character: Character, from text: String) -> String {
+
+    var result = String()
+
+    for char in text {
+        if char != character {
+            result.append(char)
+        }
+    }
+
+    return result
+
+}
