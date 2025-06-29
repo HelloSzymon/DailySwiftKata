@@ -2566,3 +2566,12 @@ func remove(character: Character, from text: String) -> String {
     return result
 
 }
+
+
+func joinWithCommas(_ items: [String]) -> String {
+
+    items.joined(separator: ", ")
+
+
+}
+joinWithCommas(["apple", "banana", "kiwi"])
