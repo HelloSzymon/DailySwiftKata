@@ -2574,4 +2574,14 @@ func joinWithCommas(_ items: [String]) -> String {
 
 
 }
-joinWithCommas(["apple", "banana", "kiwi"])
+func isPangram(_ text: String) -> Bool {
+    let lowercaseString = text.lowercased()
+    let alphabet = "abcdefghijklmnopqrstuvwxyz"
+    for letter in alphabet {
+        if !lowercaseString.contains(letter) {
+            return false
+        }
+    }
+    return true
+}
+
