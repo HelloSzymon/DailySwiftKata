@@ -2585,3 +2585,18 @@ func isPangram(_ text: String) -> Bool {
     return true
 }
 
+func nGramFrequencies(_ text: String, size: Int) -> [String: Int] {
+
+    var dict = [String: Int]()
+    let chars = Array(text)
+
+    for i in 0...(chars.count - size) {
+        let gram = String(chars[i..<i+size])
+        dict[gram, default: 0] += 1
+
+    }
+
+    return dict
+}
+
+
