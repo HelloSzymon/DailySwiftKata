@@ -2589,7 +2589,7 @@ func nGramFrequencies(_ text: String, size: Int) -> [String: Int] {
 
     var dict = [String: Int]()
     let chars = Array(text)
-
+    guard size > 0, chars.count >= size else { return [:] }
     for i in 0...(chars.count - size) {
         let gram = String(chars[i..<i+size])
         dict[gram, default: 0] += 1
@@ -2598,5 +2598,23 @@ func nGramFrequencies(_ text: String, size: Int) -> [String: Int] {
 
     return dict
 }
+func nGramFrequenciesInt(_ number: Int, size: Int) -> [Int: Int] {
+    var dict = [Int: Int]()
+    let digits = String(number).compactMap { Int(String($0)) }
+    guard size > 0, digits.count >= size else {return [:]}
+
+    for i in 0...(digits.count - size) {
+        let slice = digits[i..<i+size]
+        let ngram = Int(slice.map(String.init).joined()) ?? 0
+        dict[ngram, default: 0] += 1
+    }
+
+
+    return dict
+}
+
+
+
+
 
 
