@@ -2618,3 +2618,7 @@ func nGramFrequenciesInt(_ number: Int, size: Int) -> [Int: Int] {
 
 
 
+func isNumericPalindrome4(_ number: Int) -> Bool {
+    String(number) == String(String(number).reversed())
+
+}
