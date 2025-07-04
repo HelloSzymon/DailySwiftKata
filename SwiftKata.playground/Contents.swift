@@ -2622,3 +2622,16 @@ func isNumericPalindrome4(_ number: Int) -> Bool {
     String(number) == String(String(number).reversed())
 
 }
+
+func reverseWordsAndLetters(_ sentence: String) -> String {
+
+    var text = sentence.split(separator: " ")
+    var reversedText = text.reversed()
+    let transformers = reversedText.map{String($0.reversed())}
+    return transformers.joined()
+
+
+
+
+}
+reverseWordsAndLetters("Swift rules")
