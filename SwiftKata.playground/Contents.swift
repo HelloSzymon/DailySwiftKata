@@ -2638,5 +2638,14 @@ reverseWordsAndLetters("Swift rules")
 
 func indexOfFirstDuplicate(_ array: [Int]) -> Int? {
 
+    var seen: Set<Int> = []
+    for (index, number) in array.enumerated() {
+        if seen.contains(number) {
+            return index
+        }
+        seen.insert(number)
+    }
 
+    return nil
 }
+indexOfFirstDuplicate([1, 2, 3, 2])
