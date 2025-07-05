@@ -2635,3 +2635,8 @@ func reverseWordsAndLetters(_ sentence: String) -> String {
 
 }
 reverseWordsAndLetters("Swift rules")
+
+func indexOfFirstDuplicate(_ array: [Int]) -> Int? {
+
+
+}
