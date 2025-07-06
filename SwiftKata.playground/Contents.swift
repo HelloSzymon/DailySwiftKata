@@ -2649,3 +2649,19 @@ func indexOfFirstDuplicate(_ array: [Int]) -> Int? {
     return nil
 }
 indexOfFirstDuplicate([1, 2, 3, 2])
+
+
+func median(_ numbers: [Int]) -> Double? {
+    guard !numbers.isEmpty else { return nil }
+
+    let sorted = numbers.sorted()
+    let count = sorted.count
+
+    if count % 2 == 1 {
+        return Double(sorted[count / 2])
+    } else {
+        let mid1 = sorted[(count / 2) - 1]
+        let mid2 = sorted[count / 2]
+        return Double(mid1 + mid2) / 2.0
+    }
+}
