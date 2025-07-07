@@ -2665,3 +2665,13 @@ func median(_ numbers: [Int]) -> Double? {
         return Double(mid1 + mid2) / 2.0
     }
 }
+
+func commonCharacters(_ a: String, _ b: String) -> [Character] {
+
+    let setA = Set(a)
+    let setB = Set(b)
+
+    var result = setA.intersection(setB)
+    return Array(result)
+
+}
