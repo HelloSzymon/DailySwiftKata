@@ -2675,3 +2675,20 @@ func commonCharacters(_ a: String, _ b: String) -> [Character] {
     return Array(result)
 
 }
+
+func interleaveStrings(_ a: String, _ b: String) -> String {
+
+  var result = ""
+
+    for (charA, charB) in zip(a,b) {
+        result.append(charA)
+        result.append(charB)
+    }
+    if a.count > b.count {
+        result += a.dropFirst(b.count)
+    } else if b.count > a.count {
+        result += b.dropFirst(a.count)
+    }
+    return result
+}
+
