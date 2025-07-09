@@ -2692,3 +2692,18 @@ func interleaveStrings(_ a: String, _ b: String) -> String {
     return result
 }
 
+func median2(_ numbers: [Int]) -> Double? {
+    guard !numbers.isEmpty else { return nil }
+    var sorted = numbers.sorted()
+    let count = numbers.count
+
+    if count % 2 == 1 {
+        return Double(sorted[ count / 2])
+    } else {
+        var mid1 = sorted[count / 2 - 1]
+        var mid2 = sorted[count / 2 ]
+        return Double(mid1 + mid2) / 2.0
+    }
+
+
+}
