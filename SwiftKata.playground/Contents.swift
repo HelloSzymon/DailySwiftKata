@@ -2707,3 +2707,14 @@ func median2(_ numbers: [Int]) -> Double? {
 
 
 }
+
+func isStrictlyIncreasing(_ numbers: [Int]) -> Bool {
+
+    for i in 0..<numbers.count - 1 {
+        if numbers[i] >= numbers[i + 1] {
+            return false
+        }
+    }
+    return true
+}
+
