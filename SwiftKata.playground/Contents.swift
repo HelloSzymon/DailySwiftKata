@@ -2717,4 +2717,18 @@ func isStrictlyIncreasing(_ numbers: [Int]) -> Bool {
     }
     return true
 }
+//Np. "hello" rotowane o 2 → "lohel"
 
+func rotateRight(_ text: String, by n: Int) -> String{
+
+    guard !text.isEmpty  else {return text}
+    let lenght = text.count
+    let offset = n % lenght
+
+    let end = text.suffix(offset)
+    let start = text.prefix(lenght - offset)
+
+    return String(end + start)
+
+
+}
