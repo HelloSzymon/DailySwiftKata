@@ -2732,3 +2732,13 @@ func rotateRight(_ text: String, by n: Int) -> String{
 
 
 }
+
+func countTypes(_ array: [Any]) -> [String: Int] {
+    var result = [String: Int]()
+    for i in array {
+        let typeName = String(describing: type(of: i))
+        result[typeName, default: 0] += 1
+    }
+    return result
+}
+countTypes([1, "a", true, "b", 3.0])
