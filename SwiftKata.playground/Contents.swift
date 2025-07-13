@@ -2742,3 +2742,21 @@ func countTypes(_ array: [Any]) -> [String: Int] {
     return result
 }
 countTypes([1, "a", true, "b", 3.0])
+
+
+func uniqueInOrder(_ text: String) -> [Character] {
+
+    var previous: Character?
+    var result = [Character]()
+
+
+    for char in text {
+        if char != previous {
+            result.append(char)
+            previous = char
+        }
+    }
+
+    return result
+}
+
