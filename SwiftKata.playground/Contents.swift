@@ -2759,4 +2759,12 @@ func uniqueInOrder(_ text: String) -> [Character] {
 
     return result
 }
+func longestWordLength(_ sentence: String) -> Int {
 
+    var array = sentence.split(separator: " ")
+    return array.map { $0.count }.max() ?? 0
+
+
+}
+
+longestWordLength("Swift is fun sometimes")
