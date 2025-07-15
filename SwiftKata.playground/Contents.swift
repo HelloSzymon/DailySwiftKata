@@ -2768,3 +2768,13 @@ func longestWordLength(_ sentence: String) -> Int {
 }
 
 longestWordLength("Swift is fun sometimes")
+
+func uniqueNumbers(_ numbers: [Int]) -> [Int] {
+    var dict = [Int: Int]()
+    var result = [Int]()
+    for number in numbers {
+        dict[number, default: 0] += 1
+    }
+    result = dict.filter{$0.value == 1}.map{$0.key}
+    return result
+}
