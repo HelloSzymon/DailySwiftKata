@@ -2778,3 +2778,13 @@ func uniqueNumbers(_ numbers: [Int]) -> [Int] {
     result = dict.filter{$0.value == 1}.map{$0.key}
     return result
 }
+
+func uniqueLetters(_ letters: [String]) -> [String] {
+    var dict = [String: Int]()
+
+    for letter in letters {
+        dict[letter, default: 0] += 1
+    }
+    return dict.filter{$0.value == 1}.map{$0.key}
+
+}
