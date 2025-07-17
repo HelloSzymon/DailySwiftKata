@@ -2788,3 +2788,8 @@ func uniqueLetters(_ letters: [String]) -> [String] {
     return dict.filter{$0.value == 1}.map{$0.key}
 
 }
+func isAnagram3(_ a: String, _ b: String) -> Bool {
+
+    a.sorted() == b.sorted()
+}
+
