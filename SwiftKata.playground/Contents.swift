@@ -2793,3 +2793,32 @@ func isAnagram3(_ a: String, _ b: String) -> Bool {
     a.sorted() == b.sorted()
 }
 
+
+
+func sumDigits2(_ number: Int) -> Int {
+
+
+    String(abs(number))
+        .compactMap{Int(String($0))}
+        .reduce(0, +)
+}
+
+
+
+func groupByLength(_ words: [String]) -> [Int: [String]] {
+
+
+    var result = [Int: [String]]()
+
+    for word in words {
+        let length = word.count
+        result[length, default: []].append(word)
+    }
+
+    return result
+}
+
+print(groupByLength(["hi", "hello", "yo", "swift"]))
+// np. [2: ["hi", "yo"], 5: ["hello", "swift"]]
+
+
