@@ -2818,7 +2818,15 @@ func groupByLength(_ words: [String]) -> [Int: [String]] {
     return result
 }
 
-print(groupByLength(["hi", "hello", "yo", "swift"]))
-// np. [2: ["hi", "yo"], 5: ["hello", "swift"]]
+// Spłaszcz tablicę tablic Intów do jednej tablicy
+// np. [[1,2],[3,4]] → [1,2,3,4]
+
+func flatten2(_ input: [[Int]]) -> [Int] {
+    input.flatMap{$0}
+}
+
+print(flatten([[1, 2], [3, 4]]))       // [1, 2, 3, 4]
+print(flatten([[10], [], [5, 6, 7]]))  // [10, 5, 6, 7]
+
 
 
