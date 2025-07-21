@@ -2825,8 +2825,23 @@ func flatten2(_ input: [[Int]]) -> [Int] {
     input.flatMap{$0}
 }
 
-print(flatten([[1, 2], [3, 4]]))       // [1, 2, 3, 4]
-print(flatten([[10], [], [5, 6, 7]]))  // [10, 5, 6, 7]
+// Zlicz ile słów w tablicy to palindromy (czyli czytane wspak są takie same)
+
+func palindromeCount(_ words: [String]) -> Int {
+
+
+    var isPalidrom = 0
+
+    for word in words {
+        if word == String(word.reversed()) {
+            isPalidrom += 1
+        }
+    }
+    return isPalidrom
+}
+
+print(palindromeCount(["kajak", "ala", "kot"])) // 2
+print(palindromeCount(["abba", "wow", "test"])) // 2
 
 
 
