@@ -2840,8 +2840,15 @@ func palindromeCount(_ words: [String]) -> Int {
     return isPalidrom
 }
 
-print(palindromeCount(["kajak", "ala", "kot"])) // 2
-print(palindromeCount(["abba", "wow", "test"])) // 2
+
+func reversedWords(_ sentence: String) -> String {
+    sentence.split(separator: " ").reversed().joined(separator: " ")
+
+}
+
+print(reversedWords("Hello world"))          // "world Hello"
+print(reversedWords("Swift is awesome"))     // "awesome is Swift"
+
 
 
 
