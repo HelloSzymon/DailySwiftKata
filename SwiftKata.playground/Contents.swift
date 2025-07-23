@@ -2846,8 +2846,23 @@ func reversedWords(_ sentence: String) -> String {
 
 }
 
-print(reversedWords("Hello world"))          // "world Hello"
-print(reversedWords("Swift is awesome"))     // "awesome is Swift"
+
+
+func mostFrequentLetter2(_ input: String) -> Character {
+    let clean = input.lowercased().filter { $0 != " " }
+    var dict = [Character: Int]()
+
+    for char in clean {
+
+        dict[(char), default: 0] += 1
+    }
+    return dict.max{
+        $0.value < $1.value
+    }?.key ?? Character("")
+}
+
+print(mostFrequentLetter2("hello world")) // "l"
+print(mostFrequentLetter2("abracadabra")) // "a"
 
 
 
