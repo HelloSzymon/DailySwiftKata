@@ -2865,5 +2865,23 @@ print(mostFrequentLetter2("hello world")) // "l"
 print(mostFrequentLetter2("abracadabra")) // "a"
 
 
+func containsAllCharacters(_ base: String, _ pattern: String) -> Bool
+{
+    var baseFreq = [Character:Int]()
+    var patternFreq = [Character:Int]()
 
+    for char in base {
+        baseFreq[char, default: 0] += 1
+    }
+    for char in pattern {
+        patternFreq[char, default: 0] += 1
+    }
+
+    for (char, count) in patternFreq {
+        if baseFreq[char, default: 0] < count {
+            return false
+        }
+    }
+return true
+}
 
