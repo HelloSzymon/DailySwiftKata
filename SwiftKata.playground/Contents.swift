@@ -2885,3 +2885,16 @@ func containsAllCharacters(_ base: String, _ pattern: String) -> Bool
 return true
 }
 
+func mostCommonWordLength(_ sentence: String) -> Int {
+    var arr = sentence.split(separator: " ")
+    var dict = [Int: Int]()
+
+    for word in arr {
+        dict[String(word).count, default: 0] += 1
+    }
+    print(dict)
+
+    return dict.max{$0.value<$1.value}?.key ?? 0
+}
+
+mostCommonWordLength("hi ok noo")
