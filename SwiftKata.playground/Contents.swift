@@ -2916,5 +2916,9 @@ func fizzBuzzMapped(_ n: Int) -> [String] {
     return result
 }
 
-fizzBuzzMapped(3)
+func countVowels4(_ text: String) -> Int {
+    let samogloski: [Character] = ["a", "e", "i", "o", "u", "y"]
+    return text.filter{samogloski.contains($0)}.count
+}
+
 
