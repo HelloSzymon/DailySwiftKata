@@ -2921,4 +2921,9 @@ func countVowels4(_ text: String) -> Int {
     return text.filter{samogloski.contains($0)}.count
 }
 
+func longestWord(_ words: [String]) -> String? {
+
+    words.max(by: { $0.count < $1.count })
+
+}
 
