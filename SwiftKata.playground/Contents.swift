@@ -2927,3 +2927,20 @@ func longestWord(_ words: [String]) -> String? {
 
 }
 
+func reversePairs(_ text: String) -> String {
+   var result = ""
+    let chars = Array(text)
+    var i = 0
+
+    while i < chars.count {
+        if i + 1 < chars.count {
+            result += String(chars[i + 1]) + String(chars[i])
+        } else {
+            result += String(chars[i])
+        }
+        i + 2
+    }
+
+    return result
+}
+reversePairs("abcdef")
