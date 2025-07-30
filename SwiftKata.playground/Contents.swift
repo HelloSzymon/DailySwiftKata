@@ -2944,3 +2944,23 @@ func reversePairs(_ text: String) -> String {
     return result
 }
 reversePairs("abcdef")
+
+
+func reverseThrees(_ text: String) -> String {
+     var result = ""
+    var chars = Array(text)
+    var i = 0
+
+    while i < chars.count {
+        if i + 2 < chars.count {
+            result += String(chars[i + 2]) + String(chars[i + 1]) + String(chars[i])
+        } else {
+            for j in i..<chars.count {
+                result += String(chars[j])
+            }
+        }
+        i += 3
+    }
+    return result
+
+}
