@@ -2964,3 +2964,17 @@ func reverseThrees(_ text: String) -> String {
     return result
 
 }
+func centerTrim(_ text: String, length: Int) -> String {
+
+    guard text.count > length, length > 3 else {return text}
+    let keep = length - 3
+    let left = keep / 2
+    let right = keep - left
+
+    let start  = text.prefix(left)
+    let end = text.suffix(right)
+
+    return "\(start)...\(end)"
+
+
+}
