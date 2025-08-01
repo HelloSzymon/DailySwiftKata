@@ -2978,3 +2978,29 @@ func centerTrim(_ text: String, length: Int) -> String {
 
 
 }
+
+func findVowelClusters(_ text: String) -> [String] {
+    let vowels: Set<Character> = ["a", "e", "i", "o", "u"]
+    var clusters = [String]()
+    var currentCluste = ""
+
+    for char in text {
+        if vowels.contains(char) {
+            currentCluste.append(char)
+        } else {
+            if currentCluste.count >= 2 {
+                clusters.append(currentCluste)
+            }
+            currentCluste = ""
+        }
+
+    }
+
+    if currentCluste.count >= 2 {
+        clusters.append(currentCluste)
+    }
+
+
+    return clusters
+}
+
