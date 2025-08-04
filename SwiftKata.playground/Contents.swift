@@ -3003,4 +3003,12 @@ func findVowelClusters(_ text: String) -> [String] {
 
     return clusters
 }
+func countRepetitions(_ text: String) -> [Character: Int] {
+
+    var dict = [Character: Int]()
+    for char in text {
+        dict[(char), default: 0] += 1
+    }
+    return dict
+}
 
