@@ -3012,3 +3012,13 @@ func countRepetitions(_ text: String) -> [Character: Int] {
     return dict
 }
 
+func mirrorWords(_ sentence: String) -> Bool {
+
+    let words = sentence.lowercased().components(separatedBy: CharacterSet.alphanumerics.inverted).filter{!$0.isEmpty}
+
+
+
+    return words == Array(words.reversed())
+}
+
+
