@@ -3021,4 +3021,33 @@ func mirrorWords(_ sentence: String) -> Bool {
     return words == Array(words.reversed())
 }
 
+func isAlmostPalindrome(_ text: String) -> Bool {
+    let chars = Array(text)
+
+    func isPalindrome(_ chars: [Character], _ left: Int, _ right: Int) -> Bool {
+        var l = left
+        var r = right
+        while l < r {
+            if chars[l] != chars[r] {
+                return false
+            }
+            l += 1
+            r -= 1
+        }
+        return true
+    }
+
+    var left = 0
+    var right = chars.count - 1
+
+    while left < right {
+        if chars[left] != chars[right] {
+            return isPalindrome(chars, left + 1, right) || isPalindrome(chars, left, right - 1)
+        }
+        left += 1
+        right -= 1
+    }
+
+    return true
+}
 
