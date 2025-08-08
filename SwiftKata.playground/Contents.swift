@@ -3051,3 +3051,21 @@ func isAlmostPalindrome(_ text: String) -> Bool {
     return true
 }
 
+func reversedChunks(_ text: String, size: Int) -> String {
+    // przykład: reversedChunks("abcdefghi", size: 3) → "cbafedihg"
+
+    var result = ""
+    var chars = Array(text)
+    var i = 0
+
+    while i < chars.count {
+        let end = min(i + size, chars.count)
+        let chunk = chars[i..<end]
+        result += String(chunk.reversed())
+        i += size
+    }
+
+    return result
+}
+
+
