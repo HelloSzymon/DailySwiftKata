@@ -2943,7 +2943,7 @@ func reversePairs(_ text: String) -> String {
 
     return result
 }
-reversePairs("abcdef")
+
 
 
 func reverseThrees(_ text: String) -> String {
@@ -3068,4 +3068,10 @@ func reversedChunks(_ text: String, size: Int) -> String {
     return result
 }
 
+func sortWordsByLength(_ sentence: String) -> String {
 
+    sentence.split(separator: " ").sorted{$0.count < $1.count}.joined(separator: " ")
+
+
+}
+sortWordsByLength("Swift is elegant and fast")
