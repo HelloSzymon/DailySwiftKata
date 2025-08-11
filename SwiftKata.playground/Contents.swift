@@ -3074,4 +3074,11 @@ func sortWordsByLength(_ sentence: String) -> String {
 
 
 }
-sortWordsByLength("Swift is elegant and fast")
+
+// isUppercase("HELLO") → true
+// isUppercase("Hello") → false
+// Sprawdź, czy cały string jest napisany wielkimi literami.
+func isUppercase(_ text: String) -> Bool {
+
+    return false
+}
