@@ -3075,11 +3075,21 @@ func sortWordsByLength(_ sentence: String) -> String {
 
 }
 
-// isUppercase("HELLO") → true
-// isUppercase("Hello") → false
-// Sprawdź, czy cały string jest napisany wielkimi literami.
 func isUppercase(_ text: String) -> Bool {
     text == text.uppercased()
 
 }
-isUppercase("HELLO")
+
+func repeatString(_ text: String, count: Int) -> String {
+
+    var newString = ""
+    var i = count
+    while i > 0 {
+        newString += text
+        i -= 1
+    }
+
+    return newString
+
+}
+repeatString("ab", count: 3)
