@@ -3092,4 +3092,9 @@ func repeatString(_ text: String, count: Int) -> String {
     return newString
 
 }
-repeatString("ab", count: 3)
+func countSpaces(_ text: String) -> Int {
+
+    text.filter{$0.isWhitespace}.count
+
+}
+countSpaces("Swift is fun")
