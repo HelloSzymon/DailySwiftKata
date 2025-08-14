@@ -3097,4 +3097,16 @@ func countSpaces(_ text: String) -> Int {
     text.filter{$0.isWhitespace}.count
 
 }
-countSpaces("Swift is fun")
+func reverseWithWhile(_ text: String) -> String {
+    var result = ""
+    var text = text
+
+    while let ch = text.popLast() {
+        result.append(ch)
+    }
+
+    return result
+
+}
+reverseWithWhile("Swift")
+
