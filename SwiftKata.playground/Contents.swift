@@ -3110,3 +3110,19 @@ func reverseWithWhile(_ text: String) -> String {
 }
 reverseWithWhile("Swift")
 
+// everySecondChar("abcdef") → "bdf"
+// Zwróć co drugi znak z tekstu, zaczynając od indeksu 1.
+// Użyj while do iteracji.
+func everySecondChar(_ text: String) -> String {
+    let chars = Array(text)
+
+    var result = ""
+    var i = 1
+
+    while i < text.count {
+        result.append(chars[i])
+        i += 2
+    }
+
+    return result
+}
