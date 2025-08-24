@@ -3138,3 +3138,22 @@ func chunkString(_ text: String, size: Int) -> [String] {
 
     return result
 }
+
+// removeConsecutiveDuplicates("aaabbcdd") → "abcd"
+// Usuń kolejne powtarzające się znaki (zostaw tylko 1 z danej serii).
+func removeConsecutiveDuplicates(_ text: String) -> String {
+
+    guard !text.isEmpty else {return ""}
+    var result = ""
+    var lastChar: Character? = nil
+
+    for char in text {
+        if char != lastChar {
+            result.append(char)
+        }
+        lastChar = char
+    }
+
+    return result
+}
+
