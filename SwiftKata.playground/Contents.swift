@@ -3156,10 +3156,9 @@ func removeConsecutiveDuplicates(_ text: String) -> String {
 
     return result
 }
-// sumOfDigits(1234) → 10
 func sumOfDigits2(_ n: Int) -> Int {
 
+    String(n).compactMap{$0.wholeNumberValue}.reduce(0, +)
 
-    return 0
 }
 
