@@ -3156,4 +3156,10 @@ func removeConsecutiveDuplicates(_ text: String) -> String {
 
     return result
 }
+// sumOfDigits(1234) → 10
+func sumOfDigits2(_ n: Int) -> Int {
+
+
+    return 0
+}
 
