@@ -3162,3 +3162,9 @@ func sumOfDigits2(_ n: Int) -> Int {
 
 }
 
+func removeVowels(_ text: String) -> String {
+    let vovels: [Character] = ["a", "e", "o", "u", "y", "i"]
+    var result = text.filter{!vovels.contains($0)}
+    return String(result)
+}
+removeVowels("hello world")
