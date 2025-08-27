@@ -3167,4 +3167,20 @@ func removeVowels(_ text: String) -> String {
     var result = text.filter{!vovels.contains($0)}
     return String(result)
 }
-removeVowels("hello world")
+
+
+// groupByN("abcdefgh", n: 3) → ["abc", "def", "gh"]
+func groupByN(_ text: String, n: Int) -> [String] {
+    var result = [String]()
+    var groupArray = Array(text)
+    var i = 0
+
+
+    while i < groupArray.count {
+        let end = min(i + n, groupArray.count)
+        let chunk = String(groupArray[i..<end])
+        result.append(chunk)
+        i += n
+    }
+    return result
+}
