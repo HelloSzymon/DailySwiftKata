@@ -3184,3 +3184,8 @@ func groupByN(_ text: String, n: Int) -> [String] {
     }
     return result
 }
+
+func reverseWords8(_ sentence: String) -> String {
+    String(sentence.split(separator: " ").reversed().joined(separator: " "))
+}
+reverseWords8("Swift is fun")
