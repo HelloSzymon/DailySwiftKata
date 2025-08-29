@@ -3189,3 +3189,18 @@ func reverseWords8(_ sentence: String) -> String {
     String(sentence.split(separator: " ").reversed().joined(separator: " "))
 }
 reverseWords8("Swift is fun")
+
+
+func hasConsecutiveDuplicates(_ text: String) -> Bool {
+
+    var previousChar:  Character? = nil
+
+    for char in text {
+        if char == previousChar {
+            return true
+        }
+        previousChar = char
+    }
+
+    return false
+}
