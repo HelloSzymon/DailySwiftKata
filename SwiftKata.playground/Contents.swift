@@ -3204,3 +3204,26 @@ func hasConsecutiveDuplicates(_ text: String) -> Bool {
 
     return false
 }
+
+
+func longestRun(_ text: String) -> Int {
+    guard !text.isEmpty else { return 0 }
+
+    var maxRun = 1
+    var currentRun = 1
+    var previousChar: Character? = nil
+
+    for char in text {
+        if char == previousChar {
+            currentRun += 1
+            maxRun = max(maxRun, currentRun)
+        } else {
+            currentRun = 1
+        }
+        previousChar = char
+    }
+
+    return maxRun
+}
+
+longestRun("aaabbccccd")
