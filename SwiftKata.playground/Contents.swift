@@ -3226,4 +3226,16 @@ func longestRun(_ text: String) -> Int {
     return maxRun
 }
 
-longestRun("aaabbccccd")
+// letterHistogram("hello") → ["h":1, "e":1, "l":2, "o":1]
+func letterHistogram(_ text: String) -> [Character: Int] {
+
+    var dict: [Character: Int] = [:]
+
+    for char in text {
+        dict[char, default: 0] += 1
+    }
+
+
+    return dict
+}
+letterHistogram("hello")
