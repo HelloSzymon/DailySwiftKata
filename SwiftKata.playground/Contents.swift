@@ -3239,3 +3239,18 @@ func letterHistogram(_ text: String) -> [Character: Int] {
     return dict
 }
 letterHistogram("hello")
+
+// isDigitOnly("12345") → true
+// isDigitOnly("12a45") → false
+func isDigitOnly(_ text: String) -> Bool {
+
+    for i in text {
+        if !i.isNumber {
+            return false
+        }
+    }
+
+    return true
+
+
+}
