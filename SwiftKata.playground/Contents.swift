@@ -3254,3 +3254,16 @@ func isDigitOnly(_ text: String) -> Bool {
 
 
 }
+
+func alternateCase(_ text: String) -> String {
+    var result = ""
+    for (i, char) in text.enumerated() {
+        if i % 2 == 0 {
+            result.append(char.uppercased())
+        } else {
+            result.append(char.lowercased())
+        }
+
+    }
+    return result
+}
