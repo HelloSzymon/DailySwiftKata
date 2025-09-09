@@ -3267,3 +3267,30 @@ func alternateCase(_ text: String) -> String {
     }
     return result
 }
+
+
+func stringCompression(_ text: String) -> String {
+
+    guard !text.isEmpty else {return ""}
+    var result = ""
+    let chars = Array(text)
+    var i = 0
+
+    while i < chars.count {
+        let currentChar = chars[i]
+        var count = 1
+
+        while i + count < chars.count && chars[i + count] == currentChar {
+            count += 1
+        }
+        result.append(currentChar)
+        if count > 1 {
+            result.append(String(count))
+        }
+
+        i += count
+    }
+
+
+    return result
+}
