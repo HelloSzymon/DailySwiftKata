@@ -3294,3 +3294,20 @@ func stringCompression(_ text: String) -> String {
 
     return result
 }
+
+func firstUniqueChar(_ text: String) -> Character? {
+    var dict: [Character: Int] = [:]
+
+    for char in text {
+        dict[char, default: 0] += 1
+    }
+
+    for char in text {
+        if dict[char] == 1 {
+            return char
+        }
+    }
+
+    return nil
+}
+
