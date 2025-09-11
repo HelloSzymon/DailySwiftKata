@@ -3311,3 +3311,25 @@ func firstUniqueChar(_ text: String) -> Character? {
     return nil
 }
 
+// splitByUppercase("HelloWorldTest") → ["Hello", "World", "Test"]
+func splitByUppercase(_ text: String) -> [String] {
+    var result: [String] = []
+    var currentWord = ""
+
+    for char in text {
+        if char.isUppercase {
+            if !currentWord.isEmpty {
+                result.append(currentWord)
+            }
+            currentWord = String(char)
+        } else {
+            currentWord.append(char)
+        }
+    }
+
+    if !currentWord.isEmpty {
+        result.append(currentWord)
+    }
+
+    return result
+}
