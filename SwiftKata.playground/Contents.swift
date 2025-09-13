@@ -3333,3 +3333,15 @@ func splitByUppercase(_ text: String) -> [String] {
 
     return result
 }
+
+// rotateString("abcdef", 2) → "cdefab"
+func rotateString(_ text: String, by n: Int) -> String {
+
+    let offset = n % text.count
+    var rotated = ""
+    var firstPart = text.dropFirst(offset)
+    var lastPart = text.prefix(offset)
+    rotated = "\(firstPart)\(lastPart)"
+    return rotated
+}
+rotateString("abcdef", by: 2)
