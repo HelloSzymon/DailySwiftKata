@@ -3345,3 +3345,30 @@ func rotateString(_ text: String, by n: Int) -> String {
     return rotated
 }
 rotateString("abcdef", by: 2)
+
+func longestUniqueSubstring(_ text: String) -> String {
+    var lastSeen: [Character: Int] = [:]
+    var start = 0
+    var bestStart = 0
+    var bestLen = 0
+
+    for (i, ch) in text.enumerated() {
+        if let last = lastSeen[ch], last >= start {
+            start = last + 1
+        }
+
+        lastSeen[ch] = i
+
+        let curLen = i - start + 1
+        if curLen > bestLen {
+            bestLen = curLen
+            bestStart = start
+        }
+    }
+
+    guard bestLen > 0 else { return "" }
+
+    let sIndex = text.index(text.startIndex, offsetBy: bestStart)
+    let eIndex = text.index(sIndex, offsetBy: bestLen)
+    return String(text[sIndex..<eIndex])
+}
