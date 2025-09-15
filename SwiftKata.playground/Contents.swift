@@ -3380,8 +3380,6 @@ func countVowels(text: String) -> Int {
 }
 
 func removeVowels(text: String) -> String {
-
-
-    return ""
+    let vowels: [Character] = ["a", "e", "o", "u", "y", "i"]
+   return text.filter{!vowels.contains($0)}
 }
-removeVowels("hello") → "hll"
