@@ -3373,9 +3373,15 @@ func longestUniqueSubstring(_ text: String) -> String {
     return String(text[sIndex..<eIndex])
 }
 
-//countVowels("hello") → 2
 
 func countVowels(text: String) -> Int {
     let vowels: [Character] = ["a", "e", "o", "u", "y", "i"]
     return text.filter{vowels.contains($0)}.count
 }
+
+func removeVowels(text: String) -> String {
+
+
+    return ""
+}
+removeVowels("hello") → "hll"
