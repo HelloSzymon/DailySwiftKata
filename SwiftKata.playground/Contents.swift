@@ -3383,3 +3383,17 @@ func removeVowels(text: String) -> String {
     let vowels: [Character] = ["a", "e", "o", "u", "y", "i"]
    return text.filter{!vowels.contains($0)}
 }
+
+//repeatChars("abc", 3) → "aaabbbccc"
+
+func repeatChars(text: String, number: Int) -> String {
+
+   var result = ""
+    for char in text {
+        result += String(repeating: char, count: number)
+    }
+
+
+
+    return result
+}
