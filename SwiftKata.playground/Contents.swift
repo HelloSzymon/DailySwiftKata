@@ -3397,3 +3397,7 @@ func repeatChars(text: String, number: Int) -> String {
 
     return result
 }
+//palindrome("racecar") → true, palindrome("swift") → false
+func palindrome(_ text: String) -> Bool {
+    text == String(text.reversed())
+}
