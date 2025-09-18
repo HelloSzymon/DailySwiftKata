@@ -3404,7 +3404,22 @@ func palindrome(_ text: String) -> Bool {
 
 //fizzBuzzArray(5) → ["1","2","Fizz","4","Buzz"]
 
-func fizzBuzzArray(_number: Int) -> [String] {
+func fizzBuzzArray(_ number: Int) -> [String] {
 
-    return []
+    var result = [String]()
+
+    for i in 1...number {
+        if i % 3 == 0 && i % 5 == 0 {
+            result.append("FizzBuzz")
+        } else if i % 3 == 0 {
+            result.append("Fizz")
+        } else if i % 5 == 0 {
+            result.append("Buzz")
+        } else {
+            result.append("\(i)")
+        }
+    }
+
+    return result
 }
+fizzBuzzArray(5)
