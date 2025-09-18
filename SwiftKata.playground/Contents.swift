@@ -3401,3 +3401,10 @@ func repeatChars(text: String, number: Int) -> String {
 func palindrome(_ text: String) -> Bool {
     text == String(text.reversed())
 }
+
+//fizzBuzzArray(5) → ["1","2","Fizz","4","Buzz"]
+
+func fizzBuzzArray(_number: Int) -> [String] {
+
+    return []
+}
