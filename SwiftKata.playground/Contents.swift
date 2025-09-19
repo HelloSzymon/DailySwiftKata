@@ -3423,3 +3423,18 @@ func fizzBuzzArray(_ number: Int) -> [String] {
     return result
 }
 fizzBuzzArray(5)
+//mostCommonChar("hello") → "l"
+
+func mostCommonChar(_ text: String) -> Character?{
+
+    var dict: [Character: Int] = [:]
+
+    for i in text {
+        dict[i, default: 0] += 1
+    }
+    if let maxPair = dict.max(by: {$0.value < $1.value}) {
+        return maxPair.key
+    }
+
+    return nil
+}
