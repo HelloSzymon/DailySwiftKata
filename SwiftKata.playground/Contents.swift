@@ -3438,3 +3438,13 @@ func mostCommonChar(_ text: String) -> Character?{
 
     return nil
 }
+
+//mergeArrays([1,3,5], [2,4,6]) → [1,2,3,4,5,6]
+
+func mergeArrays(_ array1: [Int], _ array2: [Int]) -> [Int] {
+
+    var result = array1
+    result.append(contentsOf: array2)
+    return result.sorted()
+
+}
