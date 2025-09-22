@@ -3448,3 +3448,14 @@ func mergeArrays(_ array1: [Int], _ array2: [Int]) -> [Int] {
     return result.sorted()
 
 }
+func wordCount(_ text: String) -> [String: Int] {
+
+    var dict: [String: Int] = [:]
+    var words = text.components(separatedBy: " ")
+
+    for word in words {
+        dict[word, default: 0] += 1
+    }
+
+    return dict
+}
