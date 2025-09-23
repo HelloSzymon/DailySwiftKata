@@ -3459,3 +3459,8 @@ func wordCount(_ text: String) -> [String: Int] {
 
     return dict
 }
+
+func longestWord(_ text: String) -> String {
+
+    return ""
+}
