@@ -3460,7 +3460,13 @@ func wordCount(_ text: String) -> [String: Int] {
     return dict
 }
 
-func longestWord(_ text: String) -> String {
+func longestWord2(_ text: String) -> String {
 
-    return ""
+    let words = text.split(separator: " ").filter{!$0.isEmpty}
+    return words.max(by: {$0.count < $1.count}).map(String.init) ?? ""
+}
+longestWord2("nkndandas asa, asas")
+
+func areAnagrams5(_ a: String, _ b: String) -> Bool {
+    a.sorted() == b.sorted()
 }
