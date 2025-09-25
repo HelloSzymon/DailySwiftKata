@@ -3470,6 +3470,7 @@ longestWord2("nkndandas asa, asas")
 func areAnagrams5(_ a: String, _ b: String) -> Bool {
     a.sorted() == b.sorted()
 }
-func reverseWords(_ text: String) -> String {
-    ""
+func reverseWords9(_ text: String) -> String {
+    text.split(separator: " ").reversed().joined(separator: " ")
 }
+reverseWords9("Ala ma kota")
