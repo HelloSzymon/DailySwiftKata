@@ -3474,3 +3474,14 @@ func reverseWords9(_ text: String) -> String {
     text.split(separator: " ").reversed().joined(separator: " ")
 }
 reverseWords9("Ala ma kota")
+func uniqueElements(_ array: [Int]) -> [Int] {
+
+    var dict: [Int: Int] = [:]
+    for num in array {
+        dict[num, default: 0] += 1
+
+    }
+    var result = dict.filter{ $0.value == 1}.map{$0.key}
+    return result
+}
+uniqueElements([1,2,2,3,4,4,5])
