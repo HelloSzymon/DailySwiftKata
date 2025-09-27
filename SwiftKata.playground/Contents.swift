@@ -3485,3 +3485,8 @@ func uniqueElements(_ array: [Int]) -> [Int] {
     return result
 }
 uniqueElements([1,2,2,3,4,4,5])
+
+func sumOfDigits6(_ number: Int) -> Int {
+    String(number).compactMap{$0.wholeNumberValue}.reduce(0, +)
+}
+sumOfDigits6(1234)
