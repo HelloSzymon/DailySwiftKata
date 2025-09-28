@@ -3490,3 +3490,7 @@ func sumOfDigits6(_ number: Int) -> Int {
     String(number).compactMap{$0.wholeNumberValue}.reduce(0, +)
 }
 sumOfDigits6(1234)
+func flatten4(_ arrays: [[Int]]) -> [Int] {
+    arrays.flatMap{$0}
+}
+flatten4([[1,2],[3,4],[5]])
