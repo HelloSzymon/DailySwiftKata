@@ -3494,3 +3494,16 @@ func flatten4(_ arrays: [[Int]]) -> [Int] {
     arrays.flatMap{$0}
 }
 flatten4([[1,2],[3,4],[5]])
+// reverseString("hello") → "olleh"
+// Odwróć tekst "na piechotę" (użyj pętli, nie .reversed()).
+func reverseString6(_ text: String) -> String {
+    var result = ""
+
+    for letter in text {
+        result = String(letter) + result
+    }
+
+
+    return result
+}
+reverseString6("hello")
