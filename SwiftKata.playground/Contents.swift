@@ -3507,3 +3507,11 @@ func reverseString6(_ text: String) -> String {
     return result
 }
 reverseString6("hello")
+
+// countWords("Swift is fast and safe") → 5
+// Zwróć liczbę słów w zdaniu.
+func countWords(_ text: String) -> Int {
+
+    text.split(separator: " ").count
+}
+countWords("Swift is fast and safe")
