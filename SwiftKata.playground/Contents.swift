@@ -3515,3 +3515,19 @@ func countWords(_ text: String) -> Int {
     text.split(separator: " ").count
 }
 countWords("Swift is fast and safe")
+
+
+// removeDuplicates([1,2,2,3,1]) → [1,2,3]
+// Usuń powtarzające się elementy z tablicy (zachowaj kolejność).
+func removeDuplicates3(_ array: [Int]) -> [Int] {
+
+    var seen = [Int]()
+    for number in array {
+        if !seen.contains(number) {
+            seen.append(number)
+        }
+    }
+
+    return seen
+}
+removeDuplicates([1,2,2,3,1])
