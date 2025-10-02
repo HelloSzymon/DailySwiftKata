@@ -3530,4 +3530,11 @@ func removeDuplicates3(_ array: [Int]) -> [Int] {
 
     return seen
 }
-removeDuplicates([1,2,2,3,1])
+// capitalizeWords("hello world") → "Hello World"
+// Zrób tak, żeby każde słowo zaczynało się z dużej litery.
+func capitalizeWords(_ text: String) -> String {
+
+    text.split(separator: " ").map{$0.capitalized}.joined(separator: " ")
+}
+
+capitalizeWords("hello world")
