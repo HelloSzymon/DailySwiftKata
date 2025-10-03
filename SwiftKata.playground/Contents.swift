@@ -3537,4 +3537,16 @@ func capitalizeWords(_ text: String) -> String {
     text.split(separator: " ").map{$0.capitalized}.joined(separator: " ")
 }
 
-capitalizeWords("hello world")
+// charFrequency("hello") → ["h":1, "e":1, "l":2, "o":1]
+// Policz częstotliwość wystąpień każdej litery.
+func charFrequency(_ text: String) -> [Character: Int] {
+
+    var result: [Character: Int] = [:]
+
+    for char in text {
+        result[char, default: 0] += 1
+    }
+
+    return result
+}
+
