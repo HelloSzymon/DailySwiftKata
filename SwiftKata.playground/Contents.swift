@@ -3549,3 +3549,10 @@ func charFrequency(_ text: String) -> [Character: Int] {
     return result
 }
 
+// findMinMax([3, 7, 2, 9]) → (min: 2, max: 9)
+// Zwróć jednocześnie minimum i maksimum tablicy.
+func findMinMax(_ array: [Int]) -> (min: Int, max: Int)? {
+
+     (array.min() ?? 0, array.max() ?? 0)
+
+}
