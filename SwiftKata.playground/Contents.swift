@@ -3556,3 +3556,13 @@ func findMinMax(_ array: [Int]) -> (min: Int, max: Int)? {
      (array.min() ?? 0, array.max() ?? 0)
 
 }
+// isPangram("The quick brown fox jumps over the lazy dog") → true
+// Sprawdź czy zdanie zawiera wszystkie litery alfabetu.
+func isPangram2(_ text: String) -> Bool {
+    let lowercase = text.lowercased()
+    let alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+    return alphabet.allSatisfy { lowercase.contains($0) }
+
+
+}
