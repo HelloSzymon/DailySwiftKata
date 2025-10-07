@@ -3566,3 +3566,11 @@ func isPangram2(_ text: String) -> Bool {
 
 
 }
+func countConsonants(_ text: String) -> Int {
+    let vowels: [Character] = ["a", "e", "i", "o", "u"]
+
+    let letters = text.lowercased().filter { $0.isLetter }
+       return letters.filter { !vowels.contains($0) }.count
+
+}
+countConsonants("hello")
