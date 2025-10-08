@@ -3574,3 +3574,10 @@ func countConsonants(_ text: String) -> Int {
 
 }
 countConsonants("hello")
+
+func isPalindromeIgnoreCase(_ text: String) -> Bool {
+
+    let cleaned = String(text.lowercased().filter { $0.isLetter })
+      return cleaned == String(cleaned.reversed())
+}
+isPalindromeIgnoreCase("Never odd or even")
