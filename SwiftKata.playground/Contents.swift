@@ -3580,4 +3580,9 @@ func isPalindromeIgnoreCase(_ text: String) -> Bool {
     let cleaned = String(text.lowercased().filter { $0.isLetter })
       return cleaned == String(cleaned.reversed())
 }
-isPalindromeIgnoreCase("Never odd or even")
+func mergeUnique(_ a: [Int], _ b: [Int]) -> [Int]{
+    Array(Set(a + b)).sorted()
+
+}
+mergeUnique([1, 2, 3], [3, 4, 5])
+
