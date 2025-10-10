@@ -3584,5 +3584,18 @@ func mergeUnique(_ a: [Int], _ b: [Int]) -> [Int]{
     Array(Set(a + b)).sorted()
 
 }
-mergeUnique([1, 2, 3], [3, 4, 5])
+func letterPercentages(_ text: String) -> (vowels: Double, consonants: Double){
+    let vowel: [Character] = ["a", "e", "i", "o", "u"]
+
+    var _100percent = text.count
+    var vowels = text.filter{ vowel.contains($0)}.count
+    var nonVowels = _100percent - vowels
+    let vowelsPercent: Double = Double((vowels * 100) / _100percent)
+    let nonVowelsPercent: Double = Double((nonVowels * 100) / _100percent)
+
+
+
+    return ( vowelsPercent , nonVowelsPercent)
+}
+letterPercentages("hello")  
 
