@@ -3597,5 +3597,15 @@ func letterPercentages(_ text: String) -> (vowels: Double, consonants: Double){
 
     return ( vowelsPercent , nonVowelsPercent)
 }
-letterPercentages("hello")  
+func secondLargest4(_ array: [Int]) -> Int? {
+
+
+    let unique = Array(Set(array))
+    guard unique.count >= 2 else {return nil}
+
+    var resultArray = unique.sorted(by: >)
+    return resultArray[1]
+
+}
+
 
