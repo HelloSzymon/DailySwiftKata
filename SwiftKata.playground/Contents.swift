@@ -3608,4 +3608,8 @@ func secondLargest4(_ array: [Int]) -> Int? {
 
 }
 
+func removePunctuation(_ text: String) -> String {
 
+    text.filter{!$0.isPunctuation}
+}
+removePunctuation("Hello, world!")     
