@@ -3617,4 +3617,7 @@ func difference(_ a: [Int], _ b: [Int]) -> [Int] {
     a.filter{!b.contains($0)}
 }
 
-difference([1, 2, 3], [2, 3, 4])
+func containsSameElements(_ a: [Int], _ b: [Int]) -> Bool {
+    a.sorted() == b.sorted()
+}
+containsSameElements([1,2,3], [3,2,1])
