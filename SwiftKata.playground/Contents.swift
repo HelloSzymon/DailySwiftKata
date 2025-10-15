@@ -3620,4 +3620,16 @@ func difference(_ a: [Int], _ b: [Int]) -> [Int] {
 func containsSameElements(_ a: [Int], _ b: [Int]) -> Bool {
     a.sorted() == b.sorted()
 }
-containsSameElements([1,2,3], [3,2,1])
+func removeDuplicatesKeepLast(_ array: [Int]) -> [Int] {
+
+    var seen: Set<Int> = []
+    var result: [Int] = []
+
+    for num in array.reversed() {
+        if !seen.contains(num) {
+            seen.insert(num)
+            result.append(num)
+        }
+    }
+    return result.reversed()
+}
