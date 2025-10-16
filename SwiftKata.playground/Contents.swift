@@ -3633,3 +3633,19 @@ func removeDuplicatesKeepLast(_ array: [Int]) -> [Int] {
     }
     return result.reversed()
 }
+
+func countWordsLongerThan(_ text: String, length: Int) -> Int {
+
+    var result = [String]()
+    var textArray = text.components(separatedBy: " ")
+
+    for word in textArray {
+        if word.count > length {
+            result.append(word)
+        }
+    }
+
+    return result.count
+}
+
+countWordsLongerThan("Swift is awesome language", length: 4)
