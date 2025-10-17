@@ -3648,4 +3648,6 @@ func countWordsLongerThan(_ text: String, length: Int) -> Int {
     return result.count
 }
 
-countWordsLongerThan("Swift is awesome language", length: 4)
+func interleave(_ a: [Int], _ b: [Int]) -> [Int] {
+
+}
