@@ -3649,5 +3649,18 @@ func countWordsLongerThan(_ text: String, length: Int) -> Int {
 }
 
 func interleave(_ a: [Int], _ b: [Int]) -> [Int] {
+    var result = [Int]()
+    let maxLength = max(a.count, b.count)
 
+    for i in 0..<maxLength {
+        if i < a.count {
+            result.append(a[i])
+        }
+        if i < b.count {
+            result.append(b[i])
+        }
+    }
+    return result
 }
+
+interleave([1,2,3], [9,8,7])
