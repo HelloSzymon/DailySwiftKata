@@ -3663,4 +3663,16 @@ func interleave(_ a: [Int], _ b: [Int]) -> [Int] {
     return result
 }
 
-interleave([1,2,3], [9,8,7])
+func mostFrequentElement4(_ array: [Int]) -> Int? {
+
+    guard !array.isEmpty else {return nil}
+    var dict: [Int: Int] = [:]
+
+    for i in array {
+        dict[i, default: 0] += 1
+    }
+    return    dict.max(by: {$0.value < $1.value})?.key
+
+
+}
+mostFrequentElement4([1,2,2,3,3,3])
