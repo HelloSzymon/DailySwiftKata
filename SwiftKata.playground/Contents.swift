@@ -3675,4 +3675,9 @@ func mostFrequentElement4(_ array: [Int]) -> Int? {
 
 
 }
-mostFrequentElement4([1,2,2,3,3,3])
+func abbreviate(_ text: String) -> String {
+
+
+    return ""
+}
+
