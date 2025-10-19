@@ -3677,7 +3677,14 @@ func mostFrequentElement4(_ array: [Int]) -> Int? {
 }
 func abbreviate(_ text: String) -> String {
 
+    let arr = text.components(separatedBy: " ").filter{!$0.isEmpty}
+    var result = [String]()
+    for word in arr {
 
-    return ""
+        if let first = word.first {
+            result.append(String(first))
+        }
+    }
+    return result.joined(separator: ".")
 }
 
