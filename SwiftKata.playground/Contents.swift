@@ -3688,3 +3688,9 @@ func abbreviate(_ text: String) -> String {
     return result.joined(separator: ".")
 }
 
+func multiplyDigits(of number: Int) -> Int {
+
+    let digits = String(abs(number)).compactMap{Int(String($0))}
+    return digits.reduce(1, *)
+}
+multiplyDigits(of: 123)
