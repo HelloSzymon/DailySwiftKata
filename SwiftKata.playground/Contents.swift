@@ -3693,4 +3693,9 @@ func multiplyDigits(of number: Int) -> Int {
     let digits = String(abs(number)).compactMap{Int(String($0))}
     return digits.reduce(1, *)
 }
-multiplyDigits(of: 123)
+
+func commonElements3(_ a: [Int], _ b: [Int]) -> [Int] {
+    Array(Set(a.filter{b.contains($0)}))
+
+}
+commonElements3([1,2,3,4], [3,4,5])
