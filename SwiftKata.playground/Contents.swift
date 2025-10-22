@@ -3698,4 +3698,8 @@ func commonElements3(_ a: [Int], _ b: [Int]) -> [Int] {
     Array(Set(a.filter{b.contains($0)}))
 
 }
-commonElements3([1,2,3,4], [3,4,5])
+func wordLengths2(_ text: String) -> [Int] {
+    text.components(separatedBy: " ").map{$0.count}
+
+}
+wordLengths2("Swift is fun")
