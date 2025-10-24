@@ -3703,3 +3703,14 @@ func wordLengths2(_ text: String) -> [Int] {
 
 }
 wordLengths2("Swift is fun")
+func sumEvenNumbers(_ array: [Int]) -> Int {
+
+    var resultArr = [Int]()
+    for number in array {
+        if number % 2 == 0{
+            resultArr.append(number)
+        }
+    }
+    return resultArr.reduce(0, +)
+
+}
