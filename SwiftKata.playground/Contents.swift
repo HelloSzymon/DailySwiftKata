@@ -3714,3 +3714,21 @@ func sumEvenNumbers(_ array: [Int]) -> Int {
     return resultArr.reduce(0, +)
 
 }
+
+func firstUniqueCharacter(_ text: String) -> Character? {
+
+    var count: [Character: Int] = [:]
+
+    for i in text {
+        count[i, default: 0] += 1
+    }
+
+    for char in text {
+        if count[char] == 1 {
+            return char
+        }
+    }
+
+    return nil
+
+}
