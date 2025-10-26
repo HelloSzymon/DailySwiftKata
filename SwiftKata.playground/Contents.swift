@@ -3732,3 +3732,7 @@ func firstUniqueCharacter(_ text: String) -> Character? {
     return nil
 
 }
+
+func rotateArray(_ array: [Int], by positions: Int) -> [Int] {
+
+}
