@@ -3734,5 +3734,16 @@ func firstUniqueCharacter(_ text: String) -> Character? {
 }
 
 func rotateArray(_ array: [Int], by positions: Int) -> [Int] {
+    guard !array.isEmpty else { return [] }
 
+    let count = array.count
+    let offset = positions % count
+
+    let splitIndex = count - offset
+    let firstPart = array[splitIndex...]
+    let secondPart = array[..<splitIndex]
+
+    return Array(firstPart + secondPart)
 }
+
+rotateArray([1,2,3,4,5], by: 2)
