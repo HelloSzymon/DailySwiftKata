@@ -3750,5 +3750,11 @@ rotateArray([1,2,3,4,5], by: 2)
 
 func isIsogram4(_ text: String) -> Bool {
 
-    return true
+    let lower = text.lowercased()
+
+    return Set(lower).count == lower.count
+
+
+
 }
+isIsogram4("apple")
