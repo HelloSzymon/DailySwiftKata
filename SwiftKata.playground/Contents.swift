@@ -3747,3 +3747,8 @@ func rotateArray(_ array: [Int], by positions: Int) -> [Int] {
 }
 
 rotateArray([1,2,3,4,5], by: 2)
+
+func isIsogram4(_ text: String) -> Bool {
+
+    return true
+}
