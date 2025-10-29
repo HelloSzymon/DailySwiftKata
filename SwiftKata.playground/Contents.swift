@@ -3757,4 +3757,13 @@ func isIsogram4(_ text: String) -> Bool {
 
 
 }
-isIsogram4("apple")
+func sumOfDifferences(_ array: [Int]) -> Int {
+    let sortedArray = array.sorted(by: >)
+    var result = 0
+
+    for i in 0 ..< sortedArray.count - 1 {
+        result += sortedArray[i] - sortedArray[i+1]
+    }
+
+    return result
+}
