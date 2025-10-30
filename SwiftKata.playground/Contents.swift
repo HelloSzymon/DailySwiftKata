@@ -3767,3 +3767,9 @@ func sumOfDifferences(_ array: [Int]) -> Int {
 
     return result
 }
+func reverseWords10(_ text: String) -> String {
+    text.components(separatedBy: " ").reversed().joined(separator: " ")
+
+}
+
+reverseWords10("Swift is fun")
