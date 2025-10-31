@@ -3771,5 +3771,10 @@ func reverseWords10(_ text: String) -> String {
     text.components(separatedBy: " ").reversed().joined(separator: " ")
 
 }
+func countVowels5(_ text: String) -> Int {
+    let vovels: Set<Character> = ["a", "e", "i", "o", "u"]
 
-reverseWords10("Swift is fun")
+    return text.filter{vovels.contains($0)}.count
+
+}
+
