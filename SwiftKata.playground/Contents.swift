@@ -3778,3 +3778,16 @@ func countVowels5(_ text: String) -> Int {
 
 }
 
+func removeDuplicates5(_ array: [Int]) -> [Int] {
+
+    var result = [Int]()
+    var seen = Set<Int>()
+    for number in array {
+
+        if !seen.contains(number) {
+            result.append(number)
+            seen.insert(number)
+        }
+    }
+    return result
+}
