@@ -3795,4 +3795,11 @@ func removeDuplicates5(_ array: [Int]) -> [Int] {
 func longestWord3(_ text: String) -> String {
     text.components(separatedBy: " ").max(by: {$0.count < $1.count}) ?? ""
 }
-longestWord3("Swift is amazing")
+func differenceBetweenMaxAndMin(_ array: [Int]) -> Int {
+    var min = array.min() ?? 0
+    var max = array.max() ?? 0
+
+    return max - min
+
+}
+
