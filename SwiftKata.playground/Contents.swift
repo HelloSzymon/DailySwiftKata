@@ -3803,3 +3803,8 @@ func differenceBetweenMaxAndMin(_ array: [Int]) -> Int {
 
 }
 
+func isPalindrome6(_ text: String) -> Bool {
+    let lowercase = text.lowercased()
+
+    return lowercase == String(lowercase.reversed())
+}
