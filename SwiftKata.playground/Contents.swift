@@ -3808,3 +3808,17 @@ func isPalindrome6(_ text: String) -> Bool {
 
     return lowercase == String(lowercase.reversed())
 }
+
+func sumEveryOther(_ array: [Int]) -> Int {
+    var result = [Int]()
+
+    for (index, number) in array.enumerated() {
+        if index % 2 != 0 {
+            result.append(number)
+        }
+    }
+
+    return result.reduce(0, +)
+}
+
+sumEveryOther([1, 2, 3, 4, 5])
