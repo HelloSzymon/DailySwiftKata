@@ -3821,4 +3821,11 @@ func sumEveryOther(_ array: [Int]) -> Int {
     return result.reduce(0, +)
 }
 
-sumEveryOther([1, 2, 3, 4, 5])
+func average(_ numbers: [Double]) -> Double {
+    guard !numbers.isEmpty else { return 0.0 }
+    let count = numbers.count
+
+return     numbers.reduce(0, +) / Double(count)
+
+}
+
