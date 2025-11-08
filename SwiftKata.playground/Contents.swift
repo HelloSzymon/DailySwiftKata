@@ -3829,3 +3829,17 @@ return     numbers.reduce(0, +) / Double(count)
 
 }
 
+func wordFrequency(_ text: String) -> [String: Int] {
+
+    var dict = [String: Int]()
+
+    for word in text.components(separatedBy: " ") {
+        dict[String(word), default: 0] += 1
+    }
+
+
+    return dict
+
+}
+
+wordFrequency("Swift is fun Swift is powerful")
