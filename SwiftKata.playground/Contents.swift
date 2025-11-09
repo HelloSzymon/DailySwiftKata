@@ -3842,4 +3842,13 @@ func wordFrequency(_ text: String) -> [String: Int] {
 
 }
 
-wordFrequency("Swift is fun Swift is powerful")
+func capitalizeFirst(_ text: String) -> String {
+
+    let firstPart = text.first?.uppercased() ?? ""
+    let secondPart = text.dropFirst()
+
+    return firstPart + secondPart
+
+}
+
+capitalizeFirst("hello world")
