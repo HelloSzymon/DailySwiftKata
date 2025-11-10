@@ -3853,6 +3853,7 @@ func capitalizeFirst(_ text: String) -> String {
 
 func commonElements<T: Equatable>(_ a: [T], _ b: [T]) -> [T] {
 
-return []
-}
+    a.filter{b.contains($0)}
 
+}
+commonElements(["a", "b", "c"], ["b", "d"])  
