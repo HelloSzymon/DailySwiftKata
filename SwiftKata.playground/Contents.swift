@@ -3851,4 +3851,8 @@ func capitalizeFirst(_ text: String) -> String {
 
 }
 
-capitalizeFirst("hello world")
+func commonElements<T: Equatable>(_ a: [T], _ b: [T]) -> [T] {
+
+return []
+}
+
