@@ -3856,4 +3856,8 @@ func commonElements<T: Equatable>(_ a: [T], _ b: [T]) -> [T] {
     a.filter{b.contains($0)}
 
 }
-commonElements(["a", "b", "c"], ["b", "d"])  
+func removeNilValues<T>(_ array: [T?]) -> [T] {
+
+    array.compactMap{$0}
+}
+removeNilValues([1, nil, 2, nil, 3])  
