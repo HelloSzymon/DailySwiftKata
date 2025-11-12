@@ -3860,4 +3860,11 @@ func removeNilValues<T>(_ array: [T?]) -> [T] {
 
     array.compactMap{$0}
 }
-removeNilValues([1, nil, 2, nil, 3])  
+func secondLargest5(_ array: [Int]) -> Int? {
+    guard array.count > 1 else {return nil}
+
+    let sorted = Array(Set(array)).sorted(by: >)
+       return sorted.count > 1 ? sorted[1] : nil
+
+}
+secondLargest([1, 2, 3, 4, 5])
