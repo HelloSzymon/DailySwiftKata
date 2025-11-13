@@ -3867,4 +3867,9 @@ func secondLargest5(_ array: [Int]) -> Int? {
        return sorted.count > 1 ? sorted[1] : nil
 
 }
-secondLargest([1, 2, 3, 4, 5])
+func countUniqueCharacters2(_ text: String) -> Int {
+
+    Set(text).count
+
+}
+countUniqueCharacters2("hello")    
