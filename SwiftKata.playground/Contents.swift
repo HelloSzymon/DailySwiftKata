@@ -3872,4 +3872,12 @@ func countUniqueCharacters2(_ text: String) -> Int {
     Set(text).count
 
 }
-countUniqueCharacters2("hello")    
+
+
+func sumPositive(_ array: [Int]) -> Int {
+
+    array.filter{$0 > 0}.reduce(0, +)
+
+
+}
+sumPositive([1, -2, 3])
