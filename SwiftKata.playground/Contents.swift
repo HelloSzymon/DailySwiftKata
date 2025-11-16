@@ -3880,4 +3880,17 @@ func sumPositive(_ array: [Int]) -> Int {
 
 
 }
-sumPositive([1, -2, 3])
+func wordsStartingWith(_ text: String, letter: Character) -> [String] {
+
+    let target = Character(letter.lowercased())
+        let words = text.split(separator: " ").map(String.init)
+        var result = [String]()
+    for word in words {
+           if let first = word.first, Character(String(first).lowercased()) == target {
+               result.append(word)
+           }
+       }
+
+       return result
+}
+wordsStartingWith("Swift super strong style", letter: "s")
