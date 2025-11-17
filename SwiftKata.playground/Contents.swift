@@ -3893,4 +3893,15 @@ func wordsStartingWith(_ text: String, letter: Character) -> [String] {
 
        return result
 }
-wordsStartingWith("Swift super strong style", letter: "s")
+
+func allEven(_ array: [Int]) -> Bool {
+    var result = Bool()
+    for i in array {
+        if i % 2 != 0{
+            return false
+        }
+
+    }
+    return true
+}
+allEven([2,5,6])
