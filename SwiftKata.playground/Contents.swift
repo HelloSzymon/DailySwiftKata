@@ -3904,4 +3904,9 @@ func allEven(_ array: [Int]) -> Bool {
     }
     return true
 }
-allEven([2,5,6])
+func countOccurrences<T: Equatable>(_ array: [T], item: T) -> Int {
+
+    array.filter{$0 == item}.count
+
+}
+
