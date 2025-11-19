@@ -3910,3 +3910,16 @@ func countOccurrences<T: Equatable>(_ array: [T], item: T) -> Int {
 
 }
 
+func removeShortWords(_ text: String, minLength: Int) -> String {
+
+
+    var array = text.split(separator: " ")
+    var result = [String]()
+    for word in array {
+        if String(word).count >= minLength {
+            result.append(String(word))
+        }
+    }
+    return result.joined(separator: " ")
+}
+removeShortWords("this is new level", minLength: 3)
