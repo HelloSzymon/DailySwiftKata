@@ -3922,4 +3922,8 @@ func removeShortWords(_ text: String, minLength: Int) -> String {
     }
     return result.joined(separator: " ")
 }
-removeShortWords("this is new level", minLength: 3)
+func isSubset(_ a: [Int], _ b: [Int]) -> Bool {
+ let subser =    b.filter{a.contains($0)}
+    return subser == b
+}
+
