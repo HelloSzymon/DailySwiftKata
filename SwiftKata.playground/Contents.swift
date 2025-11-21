@@ -3927,3 +3927,15 @@ func isSubset(_ a: [Int], _ b: [Int]) -> Bool {
     return subser == b
 }
 
+func totalWordLength(_ text: String) -> Int {
+
+    let arr = text.split(separator: " ")
+    var count = 0
+    for word in arr {
+        count += word.count
+    }
+
+return count
+}
+totalWordLength("ala ma kota")
+
