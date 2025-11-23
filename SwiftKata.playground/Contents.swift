@@ -3937,5 +3937,11 @@ func totalWordLength(_ text: String) -> Int {
 
 return count
 }
-totalWordLength("ala ma kota")
+func largestEven(_ array: [Int]) -> Int? {
 
+   array.filter{$0 % 2 == 0}.max()
+
+
+}
+
+largestEven([1, 4, 7, 10, 3])
