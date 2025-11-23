@@ -3944,4 +3944,11 @@ func largestEven(_ array: [Int]) -> Int? {
 
 }
 
-largestEven([1, 4, 7, 10, 3])
+func isPangram3(_ text: String) -> Bool {
+
+    let lower = text.lowercased()
+    let alphabet: Set<Character> = Set("abcdefghijklmnopqrstuvwxyz")
+    let letterInText = Set(lower.filter{$0.isLetter})
+    return letterInText.isSubset(of: alphabet)
+}
+
