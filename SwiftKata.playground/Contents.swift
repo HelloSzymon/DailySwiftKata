@@ -3952,3 +3952,9 @@ func isPangram3(_ text: String) -> Bool {
     return letterInText.isSubset(of: alphabet)
 }
 
+func valuesAbove(_ array: [Int], threshold: Int) -> [Int] {
+
+    array.filter{$0 > threshold}
+
+}
+valuesAbove([1,5,7,9], threshold: 5)
