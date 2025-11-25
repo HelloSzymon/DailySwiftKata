@@ -3957,4 +3957,5 @@ func valuesAbove(_ array: [Int], threshold: Int) -> [Int] {
     array.filter{$0 > threshold}
 
 }
-valuesAbove([1,5,7,9], threshold: 5)
+func countDigits(_ text: String) -> Int {
+    text.filter { $0.isNumber }.count}
