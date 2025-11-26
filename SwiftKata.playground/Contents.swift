@@ -3959,3 +3959,8 @@ func valuesAbove(_ array: [Int], threshold: Int) -> [Int] {
 }
 func countDigits(_ text: String) -> Int {
     text.filter { $0.isNumber }.count}
+
+func reverseWords11(_ text: String) -> String {
+    text.split(separator: " ").reversed().joined(separator: " ")
+}
+reverseWords11("ala ma kota")
