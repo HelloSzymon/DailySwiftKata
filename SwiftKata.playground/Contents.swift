@@ -3963,4 +3963,8 @@ func countDigits(_ text: String) -> Int {
 func reverseWords11(_ text: String) -> String {
     text.split(separator: " ").reversed().joined(separator: " ")
 }
-reverseWords11("ala ma kota")
+func areAnagrams(_ a: [Int], _ b: [Int]) -> Bool {
+    a.sorted() == b.sorted()
+}
+
+areAnagrams([1,2,2,3], [2,3,1,2])
