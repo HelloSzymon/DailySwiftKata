@@ -3967,4 +3967,8 @@ func areAnagrams(_ a: [Int], _ b: [Int]) -> Bool {
     a.sorted() == b.sorted()
 }
 
-areAnagrams([1,2,2,3], [2,3,1,2])
+func countUppercaseLetters(_ text: String) -> Int {
+    text.filter{$0.isUppercase}.count
+
+}
+countUppercaseLetters("Hello World") 
