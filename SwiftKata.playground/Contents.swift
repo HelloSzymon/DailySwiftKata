@@ -3971,4 +3971,17 @@ func countUppercaseLetters(_ text: String) -> Int {
     text.filter{$0.isUppercase}.count
 
 }
-countUppercaseLetters("Hello World") 
+func uniquePreservingOrder(_ array: [Int]) -> [Int] {
+    var result = [Int]()
+    var seen =  Set<Int>()
+
+    for number in array {
+        if !seen.contains(number) {
+            result.append(number)
+            seen.insert(number)
+        }
+    }
+
+    return result
+}
+
