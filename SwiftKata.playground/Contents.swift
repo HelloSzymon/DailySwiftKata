@@ -3985,3 +3985,9 @@ func uniquePreservingOrder(_ array: [Int]) -> [Int] {
     return result
 }
 
+func isIsogram10(_ text: String) -> Bool {
+
+    text.count == Set(text).count
+
+}
+
