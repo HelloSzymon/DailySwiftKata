@@ -3991,3 +3991,7 @@ func isIsogram10(_ text: String) -> Bool {
 
 }
 
+func flatten10(_ array: [[Int]]) -> [Int]{
+
+    array.flatMap{$0}
+}
