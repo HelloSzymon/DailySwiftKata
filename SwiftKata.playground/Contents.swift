@@ -3995,3 +3995,13 @@ func flatten10(_ array: [[Int]]) -> [Int]{
 
     array.flatMap{$0}
 }
+func differenceSum(_ array: [Int]) -> Int {
+
+    var sorted = array.sorted()
+    var sum = 0
+    for i in 1..<sorted.count {
+        sum += sorted[i] + sorted[i-1]
+    }
+
+    return sum
+}
