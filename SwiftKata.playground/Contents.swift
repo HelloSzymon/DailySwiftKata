@@ -4005,3 +4005,16 @@ func differenceSum(_ array: [Int]) -> Int {
 
     return sum
 }
+
+func rotateLeft2(_ array: [Int], by positions: Int) -> [Int] {
+
+    guard !array.isEmpty else {return []}
+    let p = positions / array.count
+    let leftSide = array.dropFirst(p)
+    let rightSide = array.prefix(p)
+
+    return Array(leftSide + rightSide)
+
+}
+
+rotateLeft2([1,2,3], by: 3)
