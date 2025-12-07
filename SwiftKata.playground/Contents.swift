@@ -4017,4 +4017,20 @@ func rotateLeft2(_ array: [Int], by positions: Int) -> [Int] {
 
 }
 
-rotateLeft2([1,2,3], by: 3)
+
+func charFrequency2(_ text: String) -> [Character: Int] {
+    var dict: [Character : Int] = [:]
+
+    for i in text {
+        dict[i, default: 0] += 1
+    }
+    return dict
+}
+func sumAboveAverage(_ array: [Int]) -> Int {
+
+    let average = array.reduce(0, +) / array.count
+
+    return array.filter{$0 > average}.reduce(0, +)
+}
+
+sumAboveAverage([1,3,5,7])
