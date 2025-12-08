@@ -4033,4 +4033,10 @@ func sumAboveAverage(_ array: [Int]) -> Int {
     return array.filter{$0 > average}.reduce(0, +)
 }
 
-sumAboveAverage([1,3,5,7])
+func hasCommonLetter(_ a: String, _ b: String) -> Bool {
+    let setA = Set(a)
+    let setB = Set(b)
+
+    return setA.isDisjoint(with: setB)
+}
+hasCommonLetter("kot", "pies")
