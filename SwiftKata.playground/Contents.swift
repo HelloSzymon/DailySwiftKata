@@ -4039,4 +4039,15 @@ func hasCommonLetter(_ a: String, _ b: String) -> Bool {
 
     return setA.isDisjoint(with: setB)
 }
-hasCommonLetter("kot", "pies")
+func countIncreases(_ array: [Int]) -> Int {
+
+    var counter = 0
+    for i in 0..<(array.count - 1) {
+        if array[i + 1] > array[i] {
+            counter += 1
+        }
+
+    }
+    return counter
+}
+
