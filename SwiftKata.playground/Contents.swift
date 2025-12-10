@@ -4051,3 +4051,7 @@ func countIncreases(_ array: [Int]) -> Int {
     return counter
 }
 
+func reverseEachWord(_ text: String) -> String {
+}
+
+
