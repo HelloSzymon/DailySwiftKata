@@ -4052,6 +4052,14 @@ func countIncreases(_ array: [Int]) -> Int {
 }
 
 func reverseEachWord(_ text: String) -> String {
+    var result = [String]()
+    let array = text.components(separatedBy: " ")
+    for word in array {
+        result.append(String(word.reversed()))
+
+    }
+    return result.joined(separator: " ")
 }
+reverseEachWord("ala ma kota")
 
 
