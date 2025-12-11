@@ -4060,6 +4060,16 @@ func reverseEachWord(_ text: String) -> String {
     }
     return result.joined(separator: " ")
 }
-reverseEachWord("ala ma kota")
+
+func countSingles(_ array: [Int]) -> Int {
+
+    var dict = [Int: Int]()
+    for number in array {
+        dict[number,default: 0] += 1
+    }
+
+    return dict.values.filter{$0 == 1}.count
+
+}
 
 
