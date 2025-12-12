@@ -4071,5 +4071,9 @@ func countSingles(_ array: [Int]) -> Int {
     return dict.values.filter{$0 == 1}.count
 
 }
+func isSortedAscending(_ array: [Int]) -> Bool {
+
+    return true
+}
 
 
