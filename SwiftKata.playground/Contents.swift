@@ -4073,7 +4073,8 @@ func countSingles(_ array: [Int]) -> Int {
 }
 func isSortedAscending(_ array: [Int]) -> Bool {
 
-    return true
-}
+    array.sorted(by: <) == array
 
+}
+isSortedAscending([1,2,3])
 
