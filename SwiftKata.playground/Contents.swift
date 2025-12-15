@@ -4076,5 +4076,16 @@ func isSortedAscending(_ array: [Int]) -> Bool {
     array.sorted(by: <) == array
 
 }
-isSortedAscending([1,2,3])
+func longestCleanWord(_ text: String) -> String {
+
+    var words = text.split(separator: " ")
+    let cleanWords = words.map { word in
+           word.filter { $0.isLetter }
+       }
+    let longest = cleanWords.max {$0.count < $1.count}
+
+
+    return String(longest ?? "")
+}
+
 
