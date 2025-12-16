@@ -4087,5 +4087,9 @@ func longestCleanWord(_ text: String) -> String {
 
     return String(longest ?? "")
 }
+func countZeros(_ array: [Int]) -> Int {
+
+    return 0
+}
 
 
