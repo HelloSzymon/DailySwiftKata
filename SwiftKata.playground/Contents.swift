@@ -4092,4 +4092,16 @@ func countZeros(_ array: [Int]) -> Int {
 
 }
 
-countZeros([0, 1, 2 , 3, 0])
+func countGreaterThanPrevious(_ array: [Int]) -> Int {
+
+    var counter = 0
+
+    for i in 0..<array.count {
+            if array[i] > array[i - 1]{
+            counter += 1
+        }
+    }
+
+    return counter
+}
+
