@@ -4105,3 +4105,14 @@ func countGreaterThanPrevious(_ array: [Int]) -> Int {
     return counter
 }
 
+func hasDuplicates(_ array: [Int]) -> Bool {
+
+    var dict = [Int: Int]()
+
+    for i in array {
+        dict[i, default: 0] += 1
+    }
+
+    return dict.values.contains{$0 > 1}
+}
+hasDuplicates([1, 2, 2, 3, 4])
