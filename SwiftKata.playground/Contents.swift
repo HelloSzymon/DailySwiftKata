@@ -4115,4 +4115,10 @@ func hasDuplicates(_ array: [Int]) -> Bool {
 
     return dict.values.contains{$0 > 1}
 }
-hasDuplicates([1, 2, 2, 3, 4])
+
+func removeVowels2(_ text: String) -> String {
+let vowels: [Character] = ["a", "e", "i", "o", "u"]
+
+    return text.filter{!vowels.contains($0)}
+}
+
