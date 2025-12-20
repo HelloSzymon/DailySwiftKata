@@ -4122,3 +4122,16 @@ let vowels: [Character] = ["a", "e", "i", "o", "u"]
     return text.filter{!vowels.contains($0)}
 }
 
+func mostFrequent3(_ array: [Int]) -> Int? {
+
+    var dict = [Int: Int]()
+
+    for i in array {
+        dict[i, default: 0] += 1
+    }
+
+    return dict.max(by: { $0.value < $1.value })?.key
+
+}
+
+mostFrequent3([1, 2, 3, 3])
