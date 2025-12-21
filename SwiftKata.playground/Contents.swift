@@ -4134,4 +4134,16 @@ func mostFrequent3(_ array: [Int]) -> Int? {
 
 }
 
-mostFrequent3([1, 2, 3, 3])
+func rotateRight(_ array: [Int], by positions: Int) -> [Int] {
+    guard !array.isEmpty else { return [] }
+
+    let shift = positions % array.count
+
+    let leftSide = array.dropFirst(array.count - shift)
+    let rightSide = array.dropLast(shift)
+
+    return Array(leftSide + rightSide)
+}
+
+rotateRight([1,2,3,4], by: 1)
+//[1,2,3,4], 1 → [4,1,2,3]
