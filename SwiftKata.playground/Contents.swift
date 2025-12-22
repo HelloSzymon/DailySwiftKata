@@ -4145,5 +4145,9 @@ func rotateRight(_ array: [Int], by positions: Int) -> [Int] {
     return Array(leftSide + rightSide)
 }
 
-rotateRight([1,2,3,4], by: 1)
-//[1,2,3,4], 1 → [4,1,2,3]
+func longestWordLength2(_ text: String) -> Int {
+
+    text.split(separator: " ").max(by: { $0.count < $1.count })?.count ?? 0
+}
+
+
