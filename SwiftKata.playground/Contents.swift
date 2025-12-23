@@ -4150,4 +4150,23 @@ func longestWordLength2(_ text: String) -> Int {
     text.split(separator: " ").max(by: { $0.count < $1.count })?.count ?? 0
 }
 
+func isPalindrome11(_ text: String) -> Bool {
+
+    let chars = Array(text.lowercased().filter{$0 != " "})
+    var left = 0
+    var right = text.count - 1
+
+    while left < right {
+        if chars[left] != chars[right] {
+            return false
+        }
+        left += 1
+        right -= 1
+    }
+
+    return true
+}
+isPalindrome11("kajak")
+
+
 
