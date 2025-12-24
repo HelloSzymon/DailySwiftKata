@@ -4166,7 +4166,13 @@ func isPalindrome11(_ text: String) -> Bool {
 
     return true
 }
-isPalindrome11("kajak")
+func secondLargest6(_ array: [Int]) -> Int? {
+    let unique = Array(Set(array))
+        guard unique.count > 1 else { return nil }
+        return unique.sorted(by: >)[1]
+
+}
+secondLargest6([1,2,3,4])
 
 
 
