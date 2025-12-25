@@ -4172,7 +4172,17 @@ func secondLargest6(_ array: [Int]) -> Int? {
         return unique.sorted(by: >)[1]
 
 }
-secondLargest6([1,2,3,4])
+func charFrequency6(_ text: String) -> [Character: Int] {
 
+    var dict = [Character: Int]()
+
+    for i in text {
+        dict[i, default: 0] += 1
+
+    }
+    return dict
+}
+
+charFrequency6("hello")
 
 
