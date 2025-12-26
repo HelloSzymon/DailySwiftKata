@@ -4183,6 +4183,16 @@ func charFrequency6(_ text: String) -> [Character: Int] {
     return dict
 }
 
-charFrequency6("hello")
+func rotateLeft3(_ array: [Int], by positions: Int) -> [Int] {
+    guard !array.isEmpty else { return []}
+    let shift = positions % array.count
+
+    let left = array.prefix(shift)
+    let right = array.dropFirst(shift)
+
+    return Array(right + left)
+}
+rotateLeft3([1, 2, 3, 4], by: 2)
+// 1, 2, 3, 4 / 2  => 3,4,1, 2
 
 
