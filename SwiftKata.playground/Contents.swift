@@ -4192,7 +4192,18 @@ func rotateLeft3(_ array: [Int], by positions: Int) -> [Int] {
 
     return Array(right + left)
 }
-rotateLeft3([1, 2, 3, 4], by: 2)
-// 1, 2, 3, 4 / 2  => 3,4,1, 2
+func uniquePreservingOrder3(_ array: [Int]) -> [Int] {
+
+    var result = [Int]()
+
+    for i in array {
+        if !result.contains(i) {
+            result.append(i)
+        }
+    }
+
+    return result
+}
+uniquePreservingOrder3([1,2,1,3,2])
 
 
