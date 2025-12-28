@@ -4204,6 +4204,17 @@ func uniquePreservingOrder3(_ array: [Int]) -> [Int] {
 
     return result
 }
-uniquePreservingOrder3([1,2,1,3,2])
+func mostFrequent4(_ array: [Int]) -> Int? {
+
+    guard !array.isEmpty else {return nil}
+
+    var dict = [Int: Int]()
+    for i in array {
+        dict[i, default: 0] += 1
+    }
+    return    dict.max(by: {$0.value < $1.value})?.key
+
+}
+
 
 
