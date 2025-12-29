@@ -4215,6 +4215,13 @@ func mostFrequent4(_ array: [Int]) -> Int? {
     return    dict.max(by: {$0.value < $1.value})?.key
 
 }
+func weird(_ array: [Int]) -> Int {
 
+    array
+          .filter { $0 % 2 == 0 }
+          .reduce(0, +)
 
+}
+
+weird([0, 2, 4, 5])
 
