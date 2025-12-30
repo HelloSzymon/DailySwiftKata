@@ -4223,5 +4223,18 @@ func weird(_ array: [Int]) -> Int {
 
 }
 
-weird([0, 2, 4, 5])
+func countIncreases2(_ array: [Int]) -> Int {
+    guard array.count > 1 else { return 0 }
+
+    var counter = 0
+
+    for i in 0..<(array.count - 1) {
+        if array[i + 1] > array[i] {
+            counter += 1
+        }
+    }
+
+    return counter
+}
+
 
