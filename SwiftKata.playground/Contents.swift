@@ -4237,4 +4237,8 @@ func countIncreases2(_ array: [Int]) -> Int {
     return counter
 }
 
+func hasDuplicates2(_ array: [Int]) -> Bool {
+    Set(array).count != array.count
+}
+hasDuplicates2([1, 2, 3])
 
