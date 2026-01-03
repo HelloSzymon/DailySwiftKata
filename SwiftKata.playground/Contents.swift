@@ -4240,5 +4240,20 @@ func countIncreases2(_ array: [Int]) -> Int {
 func hasDuplicates2(_ array: [Int]) -> Bool {
     Set(array).count != array.count
 }
-hasDuplicates2([1, 2, 3])
+func firstUniqueElement(_ array: [Int]) -> Int? {
+    guard !array.isEmpty else {return nil}
+    var doubles = [Int()]
+    var count = [Int: Int]()
+    for i in array {
+        count[i, default: 0] += 1
+    }
 
+    for num in array {
+        if count[num] == 1 {
+            return num
+        }
+    }
+    return nil
+}
+
+firstUniqueElement([1, 2, 2, 3, 1])
