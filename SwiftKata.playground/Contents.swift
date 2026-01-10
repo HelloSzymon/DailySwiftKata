@@ -4256,4 +4256,38 @@ func firstUniqueElement(_ array: [Int]) -> Int? {
     return nil
 }
 
-firstUniqueElement([1, 2, 2, 3, 1])
+func sumOfDifferences2(_ array: [Int]) -> Int {
+
+    guard !array.isEmpty else {return 0}
+
+    var sorted = Array(array.sorted())
+    var sum = 0
+
+    for i in 1 ..< sorted.count {
+
+        let diff = sorted[i] - sorted[i - 1]
+        sum += diff
+
+    }
+
+
+    return sum
+}
+func uniquePreservingOrder4(_ array: [Int]) -> [Int] {
+
+    guard !array.isEmpty else {return []}
+
+    var seen =  Set<Int>()
+    var result = [Int]()
+
+    for number in array {
+        if !seen.contains(number) {
+            result.append(number)
+            seen.insert(number)
+        }
+    }
+
+    return result
+}
+
+uniquePreservingOrder4([1, 2, 2, 3, 1] )
