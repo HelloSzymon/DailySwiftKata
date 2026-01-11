@@ -4290,4 +4290,8 @@ func uniquePreservingOrder4(_ array: [Int]) -> [Int] {
     return result
 }
 
-uniquePreservingOrder4([1, 2, 2, 3, 1] )
+func isSortedAscending3(_ array: [Int]) -> Bool {
+
+    array == array.sorted(by: <)
+}
+isSortedAscending3([4, 2, 3])
