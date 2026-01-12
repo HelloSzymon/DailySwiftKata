@@ -4294,4 +4294,13 @@ func isSortedAscending3(_ array: [Int]) -> Bool {
 
     array == array.sorted(by: <)
 }
-isSortedAscending3([4, 2, 3])
+
+//func longestCleanWord3(_ text: String) -> String {
+//    text
+//          .split(separator: " ")
+//          .filter { $0.allSatisfy { $0.isLetter } }
+//          .max { $0.count < $1.count }
+//          .map(String.init) ?? ""
+//
+//}
+//longestCleanWord3("Hello, world!")
