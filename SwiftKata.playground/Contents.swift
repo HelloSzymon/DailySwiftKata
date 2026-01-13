@@ -4304,3 +4304,13 @@ func isSortedAscending3(_ array: [Int]) -> Bool {
 //
 //}
 //longestCleanWord3("Hello, world!")
+
+
+func isSortedAscending4(_ array: [Int]) -> Bool {
+    array.sorted(by: <) == array
+}
+
+func isSortedAscending5(_ array: [Int]) -> Bool {
+    zip(array, array.dropFirst()).allSatisfy{$0 <= $1}
+}
+
