@@ -4314,3 +4314,10 @@ func isSortedAscending5(_ array: [Int]) -> Bool {
     zip(array, array.dropFirst()).allSatisfy{$0 <= $1}
 }
 
+func countVowels6(_ text: String) -> Int {
+    let vowels: [Character] = ["a", "e", "i", "o", "u"]
+    return text.filter{vowels.contains($0)}.count
+
+}
+
+
