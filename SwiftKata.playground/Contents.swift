@@ -4319,5 +4319,21 @@ func countVowels6(_ text: String) -> Int {
     return text.filter{vowels.contains($0)}.count
 
 }
+func firstNonRepeatingCharacter(_ text: String) -> Character? {
+    var counts: [Character: Int] = [:]
+
+    for i in text {
+        counts[i, default: 0] += 1
+    }
+
+    for char in text {
+        if counts[char] == 1 {
+            return char
+        }
+
+    }
+    return nil
+}
+
 
 
