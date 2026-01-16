@@ -4334,6 +4334,14 @@ func firstNonRepeatingCharacter(_ text: String) -> Character? {
     }
     return nil
 }
+func rotateRight3(_ array: [Int], by k: Int) -> [Int] {
+
+    guard !array.isEmpty else {return []}
+    let shift = k % array.count
+
+    return Array(array.dropFirst(array.count - shift) + array.dropLast(shift))
+
+}
 
 
-
+rotateRight3([1,2,3,4,5], by: 2)
