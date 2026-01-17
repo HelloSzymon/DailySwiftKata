@@ -4344,4 +4344,7 @@ func rotateRight3(_ array: [Int], by k: Int) -> [Int] {
 }
 
 
-rotateRight3([1,2,3,4,5], by: 2)
+func zipSum(_ a: [Int], _ b: [Int]) -> [Int] {
+    zip(a, b).map{$0 + $1}
+}
+
