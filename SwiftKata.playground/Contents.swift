@@ -1544,7 +1544,7 @@ func longestWord(_ sentence: String) -> String {
 
     String(sentence.filter{$0.isLetter || $0.isWhitespace}.split(separator: " ").max() ?? "")
 }
-longestWord("Ala ma kota, ale pies jest większy!")
+
 
 func rotateMatrix180second(_ matrix: [[Int]]) -> [[Int]] {
 
@@ -4346,5 +4346,13 @@ func rotateRight3(_ array: [Int], by k: Int) -> [Int] {
 
 func zipSum(_ a: [Int], _ b: [Int]) -> [Int] {
     zip(a, b).map{$0 + $1}
+}
+
+func longestWord(_ sentence: String) -> String? {
+    sentence
+        .split(separator: " ")
+        .map(String.init)
+        .max(by: { $0.count < $1.count })
+
 }
 
