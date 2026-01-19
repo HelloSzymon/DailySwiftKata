@@ -4356,3 +4356,9 @@ func longestWord(_ sentence: String) -> String? {
 
 }
 
+func isPalindromeIgnoringCase(_ text: String) -> Bool {
+    // Twój kod
+
+    String(text.lowercased().reversed()) == text.lowercased()
+}
+isPalindromeIgnoringCase("Racecar")
