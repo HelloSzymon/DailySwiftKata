@@ -4361,4 +4361,15 @@ func isPalindromeIgnoringCase(_ text: String) -> Bool {
 
     String(text.lowercased().reversed()) == text.lowercased()
 }
-isPalindromeIgnoringCase("Racecar")
+func firstNilIndex(_ array: [Int?]) -> Int? {
+
+    for (index, element) in array.enumerated() {
+        if element == nil {
+            return index
+        }
+
+    }
+    return nil
+
+}
+
