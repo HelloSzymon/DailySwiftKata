@@ -4372,4 +4372,9 @@ func firstNilIndex(_ array: [Int?]) -> Int? {
     return nil
 
 }
+func sumOfValidInts(_ strings: [String]) -> Int {
 
+    strings.compactMap{Int($0)}.reduce(0, +)
+
+}
+sumOfValidInts(["1", "2", "x", "3"])
