@@ -4377,4 +4377,13 @@ func sumOfValidInts(_ strings: [String]) -> Int {
     strings.compactMap{Int($0)}.reduce(0, +)
 
 }
-sumOfValidInts(["1", "2", "x", "3"])
+func mostFrequentElement6(_ array: [Int]) -> Int? {
+    guard !array.isEmpty else {return nil}
+    var dict = [Int: Int]()
+
+    for i in array {
+        dict[i, default: 0] += 1
+    }
+
+    return dict.max {$0.value < $1.value}?.key
+}
