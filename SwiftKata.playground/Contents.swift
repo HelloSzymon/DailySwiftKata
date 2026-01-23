@@ -4387,3 +4387,8 @@ func mostFrequentElement6(_ array: [Int]) -> Int? {
 
     return dict.max {$0.value < $1.value}?.key
 }
+func removeNilAndFlatten(_ array: [[Int?]]) -> [Int] {
+
+    array.flatMap{$0}.compactMap{$0}
+}
+removeNilAndFlatten([[1, nil, 2], [], [3, nil]]) 
