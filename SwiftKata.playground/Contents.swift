@@ -4391,4 +4391,14 @@ func removeNilAndFlatten(_ array: [[Int?]]) -> [Int] {
 
     array.flatMap{$0}.compactMap{$0}
 }
-removeNilAndFlatten([[1, nil, 2], [], [3, nil]]) 
+func isValidEmailLite(_ email: String) -> Bool {
+    guard !email.isEmpty else {return false}
+
+    let parts = email.split(separator: "@")
+    guard parts.count == 2 else {return false}
+    guard !parts[0].isEmpty, !parts[1].isEmpty else {return false}
+
+    return true
+
+}
+
