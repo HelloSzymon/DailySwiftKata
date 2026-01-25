@@ -4402,3 +4402,5 @@ func isValidEmailLite(_ email: String) -> Bool {
 
 }
 
+func chunked<T>(_ array: [T], size: Int) -> [[T]] {
+}
