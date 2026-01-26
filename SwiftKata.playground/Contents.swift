@@ -4403,4 +4403,16 @@ func isValidEmailLite(_ email: String) -> Bool {
 }
 
 func chunked<T>(_ array: [T], size: Int) -> [[T]] {
+    guard size > 0 else { return [] }
+    var result = [[T]]()
+    var index = 0
+
+    while index < array.count {
+        let end = min(index + size, array.count)
+        let chunk = Array(array[index..<end])
+        result.append(chunk)
+        index += size
+    }
+
+    return result
 }
