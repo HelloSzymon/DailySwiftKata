@@ -4421,4 +4421,16 @@ extension Array {
         guard index >= 0 && index < count else {return nil}
         return self[index]
     }
+
 }
+
+func firstNegativeIndex(_ array: [Int]) -> Int? {
+
+    for (index, element) in array.enumerated() {
+        if element < 0 {
+            return index
+        }
+    }
+    return nil
+}
+
