@@ -4434,3 +4434,15 @@ func firstNegativeIndex(_ array: [Int]) -> Int? {
     return nil
 }
 
+func extractFirstNumber(_ text: String) -> Int? {
+    var digits = ""
+    for char in text {
+        if char.isNumber {
+            digits.append(char)
+        } else if !digits.isEmpty{
+            break
+        }
+    }
+    return digits.isEmpty ? nil : Int(digits)
+}
+
