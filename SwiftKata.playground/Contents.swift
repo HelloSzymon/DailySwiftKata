@@ -4446,3 +4446,9 @@ func extractFirstNumber(_ text: String) -> Int? {
     return digits.isEmpty ? nil : Int(digits)
 }
 
+extension Array {
+    func second() -> Element? {
+        guard self.count > 1 else {return nil}
+        return self[1]
+    }
+}
