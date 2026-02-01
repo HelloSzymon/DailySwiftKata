@@ -4452,3 +4452,17 @@ extension Array {
         return self[1]
     }
 }
+func wordsLongerThan(_ words: [String], length: Int) -> [String] {
+
+    var result = [String]()
+
+    for word in words {
+        if word.count > length {
+            result.append(word)
+        }
+    }
+
+    return result
+
+}
+wordsLongerThan(["cat", "tiger", "lion"], length: 3)
