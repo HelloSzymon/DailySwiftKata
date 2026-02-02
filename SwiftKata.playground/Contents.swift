@@ -2767,7 +2767,6 @@ func longestWordLength(_ sentence: String) -> Int {
 
 }
 
-longestWordLength("Swift is fun sometimes")
 
 func uniqueNumbers(_ numbers: [Int]) -> [Int] {
     var dict = [Int: Int]()
@@ -4465,4 +4464,9 @@ func wordsLongerThan(_ words: [String], length: Int) -> [String] {
     return result
 
 }
-wordsLongerThan(["cat", "tiger", "lion"], length: 3)
+func longestWordLength(_ sentence: String) -> Int? {
+
+    var split = sentence.split(separator: " ")
+    return split.map{$0.count}.max()
+
+}
