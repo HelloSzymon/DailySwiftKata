@@ -4470,3 +4470,9 @@ func longestWordLength(_ sentence: String) -> Int? {
     return split.map{$0.count}.max()
 
 }
+
+extension String {
+    func trimmed() -> String {
+        self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+}
