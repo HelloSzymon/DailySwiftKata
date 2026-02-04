@@ -4476,3 +4476,17 @@ extension String {
         self.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }
+
+func pairs<T>(_ array: [T]) -> [(T, T)] {
+
+    var result: [(T, T)] = []
+
+    var i = 0
+
+    while i + 1 < array.count {
+        result.append((array[i], array[i + 1]))
+        i += 2
+    }
+    return result
+
+}
