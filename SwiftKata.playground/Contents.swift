@@ -4490,3 +4490,17 @@ func pairs<T>(_ array: [T]) -> [(T, T)] {
     return result
 
 }
+
+func hasEqualNeighbors(_ array: [Int]) -> Bool {
+
+    for i in 0 ..< (array.count - 1) {
+        if array[i] == array[i + 1] {
+            return true
+        }
+
+    }
+
+
+    return false
+
+}
