@@ -4504,3 +4504,13 @@ func hasEqualNeighbors(_ array: [Int]) -> Bool {
     return false
 
 }
+func countUppercase(_ text: String) -> Int {
+    var result = 0
+    for letter in text {
+        if letter.isUppercase {
+            result +=1
+        }
+    }
+
+    return result
+}
