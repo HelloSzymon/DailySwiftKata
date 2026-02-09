@@ -4514,3 +4514,10 @@ func countUppercase(_ text: String) -> Int {
 
     return result
 }
+
+extension Array {
+    func firstTwo() -> [Element] {
+        Array(self.prefix(2))
+
+    }
+}
