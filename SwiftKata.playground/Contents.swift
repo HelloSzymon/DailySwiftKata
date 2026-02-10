@@ -4521,3 +4521,17 @@ extension Array {
 
     }
 }
+
+func evenLengthWords(_ words: [String]) -> [String] {
+
+    var result = [String]()
+    for word in words {
+        if word.count % 2 == 0 {
+            result.append(word)
+        }
+    }
+    return result
+
+
+}
+
