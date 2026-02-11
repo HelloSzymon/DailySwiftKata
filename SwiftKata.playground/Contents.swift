@@ -4535,3 +4535,15 @@ func evenLengthWords(_ words: [String]) -> [String] {
 
 }
 
+func characterFrequency(_ text: String) -> [Character: Int] {
+
+    var dict = [Character: Int]()
+
+    for letter in text {
+        dict[letter, default: 0] += 1
+    }
+    return dict
+}
+
+characterFrequency("aba")
+
