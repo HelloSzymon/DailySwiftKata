@@ -4508,7 +4508,7 @@ func countUppercase(_ text: String) -> Int {
     var result = 0
     for letter in text {
         if letter.isUppercase {
-            result +=1
+            result += 1
         }
     }
 
@@ -4546,4 +4546,11 @@ func characterFrequency(_ text: String) -> [Character: Int] {
 }
 
 characterFrequency("aba")
+
+extension String {
+    func withoutSpaces() -> String {
+        self.filter{!$0.isWhitespace}
+    }
+}
+
 
