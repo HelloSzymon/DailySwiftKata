@@ -4554,3 +4554,13 @@ extension String {
 }
 
 
+func middleElement<T>(_ array: [T]) -> T? {
+    if !array.isEmpty {
+        return nil
+    }
+    let count = array.count
+    if count % 2 == 1 {
+        return array[count / 2]
+    }
+    return nil
+}
