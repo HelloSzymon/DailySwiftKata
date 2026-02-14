@@ -4564,3 +4564,15 @@ func middleElement<T>(_ array: [T]) -> T? {
     }
     return nil
 }
+
+func hasIncreasingSequence(_ array: [Int]) -> Bool {
+    guard array.count >= 3 else { return false }
+
+    for number in 0 ..< (array.count - 2) {
+        if array[number] < array[number + 1] && array[number + 1] < array[number + 2] {
+            return true
+        }
+    }
+
+    return false
+}
