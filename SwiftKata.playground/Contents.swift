@@ -4576,3 +4576,10 @@ func hasIncreasingSequence(_ array: [Int]) -> Bool {
 
     return false
 }
+
+func hasDuplicateCharacters(_ text: String) -> Bool {
+
+    text.count != Set(text).count
+}
+
+
