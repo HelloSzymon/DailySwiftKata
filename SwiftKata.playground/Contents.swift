@@ -4582,4 +4582,9 @@ func hasDuplicateCharacters(_ text: String) -> Bool {
     text.count != Set(text).count
 }
 
+extension Array where Element: Equatable {
+    func containsDuplicates() -> Bool {
+    }
+}
+
 
