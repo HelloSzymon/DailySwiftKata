@@ -4588,5 +4588,12 @@ extension Array where Element: Hashable {
         Set(self).count != self.count
     }
 }
+func capitalizeFirstLetter(_ words: [String]) -> [String] {
+var result = [String]()
+    for word in words {
+        result.append(word.capitalized)
+    }
+    return result
+}
 
-
+capitalizeFirstLetter(["ala", "ma", "kota"])
