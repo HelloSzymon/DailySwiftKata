@@ -4596,4 +4596,16 @@ var result = [String]()
     return result
 }
 
-capitalizeFirstLetter(["ala", "ma", "kota"])
+func mostFrequentCharacter3(_ text: String) -> Character? {
+
+    var dict = [Character: Int]()
+
+    for letter in text {
+        dict[letter, default: 0] += 1
+
+    }
+
+
+    return dict.max {$0.value < $1.value}?.key
+}
+
