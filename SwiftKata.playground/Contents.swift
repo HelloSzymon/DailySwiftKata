@@ -4609,3 +4609,5 @@ func mostFrequentCharacter3(_ text: String) -> Character? {
     return dict.max {$0.value < $1.value}?.key
 }
 
+func sumOfPairs(_ array: [Int]) -> [Int] {
+}
