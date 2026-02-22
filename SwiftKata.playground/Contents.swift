@@ -4610,4 +4610,11 @@ func mostFrequentCharacter3(_ text: String) -> Character? {
 }
 
 func sumOfPairs(_ array: [Int]) -> [Int] {
+    var result = [Int]()
+
+
+    for i in stride(from: 0, to: array.count - 1 , by: 2) {
+        result.append(array[i] + array[i + 1])
+    }
+    return result
 }
