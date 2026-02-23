@@ -4618,3 +4618,6 @@ func sumOfPairs(_ array: [Int]) -> [Int] {
     }
     return result
 }
+func isPalindrome9(_ text: String) -> Bool {
+    text == String(text.reversed())
+}
