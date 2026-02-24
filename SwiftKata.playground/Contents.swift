@@ -4621,3 +4621,16 @@ func sumOfPairs(_ array: [Int]) -> [Int] {
 func isPalindrome9(_ text: String) -> Bool {
     text == String(text.reversed())
 }
+
+
+func hasAdjacentDifference(_ array: [Int], difference: Int) -> Bool {
+    guard array.count >= 2 else { return false}
+
+    for i in 0 ..< (array.count - 1) {
+        if abs(array[i] - array[i + 1]) == difference {
+            return true
+        }
+    }
+    return false
+
+}
