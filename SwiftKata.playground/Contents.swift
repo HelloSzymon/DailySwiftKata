@@ -4634,3 +4634,15 @@ func hasAdjacentDifference(_ array: [Int], difference: Int) -> Bool {
     return false
 
 }
+
+func countAdjacentEquals(_ array: [Int]) -> Int {
+
+    var counter = Int()
+    for i in 0..<(array.count - 1) {
+        if array[i] == array[i + 1] {
+            counter += 1
+        }
+    }
+    return counter
+
+}
