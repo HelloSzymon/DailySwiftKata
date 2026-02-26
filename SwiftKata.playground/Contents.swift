@@ -4646,3 +4646,16 @@ func countAdjacentEquals(_ array: [Int]) -> Int {
     return counter
 
 }
+func hasThreeConsecutiveOdds(_ array: [Int]) -> Bool {
+    guard array.count >= 3 else { return false }
+
+    for i in 0..<(array.count - 2) {
+        if array[i] % 2 != 0 &&
+           array[i + 1] % 2 != 0 &&
+           array[i + 2] % 2 != 0 {
+            return true
+        }
+    }
+
+    return false
+}
