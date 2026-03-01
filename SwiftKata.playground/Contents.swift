@@ -4663,11 +4663,15 @@ func hasThreeConsecutiveOdds(_ array: [Int]) -> Bool {
 func middleElements<T>(_ array: [T]) -> [T] {
 
     let count = array.count
+    guard count > 0 else { return [] }
+    var result = [T]()
 
-        if count % 2 == 0{
-            array[count / 2]
-        } else {
-            array[count]
-        }
-    return
+      if count % 2 == 1 {
+          return [array[count / 2]]
+      } else {
+          return [
+              array[count / 2 - 1],
+              array[count / 2]
+          ]
+      }
 }
