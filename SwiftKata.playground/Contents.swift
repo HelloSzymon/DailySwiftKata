@@ -4675,3 +4675,18 @@ func middleElements<T>(_ array: [T]) -> [T] {
           ]
       }
 }
+
+func reversedFirstHalf<T>(_ array: [T]) -> [T] {
+
+    let count = array.count
+    guard count > 0 else {return []}
+    let midIndex = count / 2
+
+    let firstHalfReversed = array[0..<midIndex].reversed()
+        let secondHalf = array[midIndex..<count]
+
+        return Array(firstHalfReversed) + secondHalf
+}
+
+//[1,2,3,4,5,6]
+//→ [3,2,1,4,5,6]
