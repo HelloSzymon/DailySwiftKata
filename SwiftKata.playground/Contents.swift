@@ -4688,5 +4688,21 @@ func reversedFirstHalf<T>(_ array: [T]) -> [T] {
         return Array(firstHalfReversed) + secondHalf
 }
 
-//[1,2,3,4,5,6]
-//→ [3,2,1,4,5,6]
+func maxAdjacentDifferenceIndex(_ array: [Int]) -> Int? {
+
+    guard array.count >= 2 else {return nil}
+
+    var maxDifference = abs(array[0] - array[1])
+    var maxIndex = 0
+    for i in 1..<(array.count - 1) {
+        let difference = abs(array[i] - array[i + 1])
+        if difference > maxDifference {
+            maxDifference = difference
+            maxIndex = i
+        }
+    }
+
+return maxIndex
+
+
+}
